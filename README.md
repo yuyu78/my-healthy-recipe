@@ -13,13 +13,15 @@ b.[Wireframe](#wireframe)
 
 2. [Features](#features)  
 
-3. [Technologies used](#technologies-used)  
+3. [Database](#database)  
 
-4. [Testing](#testing)
+4. [Technologies used](#technologies-used)  
 
-5. [Deployment](#deployment)
+5. [Testing](#testing)
 
-6. [Credits](#credits)
+6. [Deployment](#deployment)
+
+7. [Credits](#credits)
 ---
 ## UX <a name="ux"></a>
 
@@ -90,3 +92,24 @@ The main color is light green and blue, which represents health, wellness, balan
 * Filter recipe for Vegan people, allergen
 * Able to reset password if the user forgot 
  
+## Database <a name="database"></a>
+
+The schema for the database below: 
+![Database Schema](https://user-images.githubusercontent.com/76018052/128268702-08d6f61b-38bf-4a5e-8f48-50a35c41fc18.PNG)
+
+
+
+## Technologies used <a name="technologies-used"></a>
+---
+* [Git](https://git-scm.com/) for version control
+* [Github](https://github.com/) to store repositories.
+* [Gitpod](https://www.gitpod.io/), for the workspace. 
+* [Balsamiq](https://balsamiq.com/wireframes/) to create a mockup.
+* [Dbdiagram](https://dbdiagram.io/home) to create the database schema.
+
+
+## Testing <a name="testing"></a>
+
+## Deployment <a name="deployment"></a>
+
+## Credits <a name="credits"></a>
