@@ -1,6 +1,6 @@
 # Yuki Ishii
 
-## A French pastry online shop "Un Delice"
+## My Healthy Recipe 
 
 The goal of this project is to allow the user to access, store, share  and review healthy recipe. The user can search the recipe by typing the keyword in th search bar. 
 
