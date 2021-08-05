@@ -106,7 +106,11 @@ The schema for the database below:
 * [Gitpod](https://www.gitpod.io/), for the workspace. 
 * [Balsamiq](https://balsamiq.com/wireframes/) to create a mockup.
 * [Dbdiagram](https://dbdiagram.io/home) to create the database schema.
-
+* [MongoDB](https://mongodb.com/)
+* [Heroku](https://heroku.com/)
+* [Materialize css 1.0.0](https://materializecss.com/)
+* [Flask](https://flask.palletsprojects.com/)
+* [Jquery](https://code.jquery.com/)
 
 ## Testing <a name="testing"></a>
 
