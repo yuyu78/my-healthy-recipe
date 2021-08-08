@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <script src="https://kit.fontawesome.com/47aa28a2ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
@@ -55,6 +53,41 @@
         {% endblock %}
     </main>
 
+    <footer class="page-footer teal lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>My Healthy Recipe</h5>
+                    <p class="grey-text text-lighten-4" ><i>Eat, enjoy healthy food and get inpired.</i></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Follow us</h5>
+                    <ul class="list-inline">
+                        <li><a target="_blank" href="https://www.facebook.com/" rel="noopener">
+                            <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/" rel="noopener">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a target="_blank" href="https://twitter.com/" rel="noopener">
+                            <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a target="_blank" href="https://ie.linkedin.com/" rel="noopener">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a target="_blank" href="https://ie.linkedin.com/" rel="noopener">
+                            <i class="fab fa-pinterest-square" aria-hidden="true"></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright teal lighten-3">
+            <div class="container">
+                © 2014 Copyright Text
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

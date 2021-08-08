@@ -113,11 +113,13 @@ The schema for the database below:
 * [Jquery](https://code.jquery.com/)
 
 ## Testing <a name="testing"></a>
-When I use the url method on the link "home" of the navbar, it shows an error message in the console 
+* When I use the url method on the link "home" of the navbar, it shows an error message in the console 
 ![error message violation console](https://user-images.githubusercontent.com/76018052/128433103-67578485-901a-42e0-9ba1-e190fae5b67a.PNG)
 To avoid this error message in the console, checked the solution in [Stackoverflow](https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961) and added in script.js file the code below:  
 
 ![solution to avoid error message violation](https://user-images.githubusercontent.com/76018052/128433343-7c927d89-087e-4a7d-9ae7-49e28f8d7829.PNG)
+
+* To use list-inline like bootstrap and align the social media links on the footer, I checked the solution in [stackoverflow](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss) and copy paste in the css the bootstrap style
 
 ## Deployment <a name="deployment"></a>
 
