@@ -1,3 +1,32 @@
+
+/* ------------------------------------------------------------------ home page*/
+
+.hero-image {
+    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-image.jpg");
+    width: 100%;
+    height: 80vh; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+h1 {
+    margin-top: 0;
+}
+
+.hero-image p {
+    font-size: 2rem;
+}
+
+.text-shadow {
+    text-shadow: 2px 5px 6px #121312d4;
+}
+
+/* ------------------------------------------------------------------ flash message Login/Register */
+
+
 .flashes h4 {
     line-height: 2;
 }
+
