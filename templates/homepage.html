@@ -4,8 +4,13 @@
     <!--Heroes images-->
     <div class="hero-image row valign-wrapper">
         <div class="col s12 center-align text-shadow">
+            {% if not session['user'] %}
             <h1>Welcome to my Heatlhy Recipe!</h1>
-            <p>To create, share, find and save your favorites healthy recipes, register </p>
+            <p>To create, share, find and save your favorites healthy recipes, register  <a href="{{ url_for('register') }}" class="teal-text">here</a></p>
+            {% else %}
+            <h1>Welcome {{ username }}!</h1>
+            <p>You can search your favorites recipes below or add a new recipe by clicking <a href="{{ url_for('get_recipes') }}" class="teal-text">here</a></p>
+            {% endif %}
         </div>
     </div>
 

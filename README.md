@@ -121,6 +121,8 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
 
 * To use list-inline like bootstrap and align the social media links on the footer, I checked the solution in [stackoverflow](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss) and copy paste in the css the bootstrap style
 
+* To change the welcome message when the user is login, checked the solution to [stackoverflow](https://stackoverflow.com/questions/58089743/how-to-fix-login-and-logout-in-jinja-template-based-on-user-session)
+
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>
