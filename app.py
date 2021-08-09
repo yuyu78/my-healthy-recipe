@@ -22,6 +22,8 @@ mongo = PyMongo(app)
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
+    if not session.get("user") is None:
+        return render_template("homepage.html", username=session['user'])
     return render_template("homepage.html", recipes=recipes)
 
 
@@ -73,6 +75,15 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    #remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("get_recipes"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

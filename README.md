@@ -123,6 +123,16 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
 
 * To change the welcome message when the user is login, checked the solution to [stackoverflow](https://stackoverflow.com/questions/58089743/how-to-fix-login-and-logout-in-jinja-template-based-on-user-session)
 
+* I added this code below in the function get_recipes() to display the username in the welcome message when the user is logged in:  
+    *if session["user"]:  
+    return render_template("homepage.html", username=session['user'])*
+
+    but the problem is when I logout, it shows an error message in the page:  
+    ![key error](https://user-images.githubusercontent.com/76018052/128783479-51bbeeca-4f51-45e4-bc59-e0cc56cc54ea.PNG)
+    I contacted the tutor and adviced me to use the the get method like the code below:  
+    *if not session.get("user") is None:*  
+    In this code, we are checking if the get() method returned None. If it is not None, that means there is a user in the session.
+
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>
