@@ -136,3 +136,15 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>
+---
+### Inspiration
+The function register, login and logout are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
+
+### Code
+* Navbar from [Materializecss](https://materializecss.com/navbar.html)
+* Footer from [Materializecss](https://materializecss.com/footer.html)
+* Cards recipes from [Materializecss](https://materializecss.com/cards.html#)
+
+### Media
+All the image are from [Unplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
+
