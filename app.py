@@ -85,6 +85,13 @@ def logout():
     return redirect(url_for("get_recipes"))
 
 
+@app.route("/show_recipe")
+def show_recipe():
+    #show the recipe page with ingredients and preration
+    recipes = mongo.db.recipes.find()
+    return render_template("show_recipe.html", recipes=recipes)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

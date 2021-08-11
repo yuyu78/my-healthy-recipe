@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container recipe-page">
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col m6 card-image">
+            <img class="recipe-image" src="{{ recipe.image_url }}">
+        </div>
+        <div class="col m6">
+            <h2>{{ recipe.recipe_name }}</h2>
+            <h3>Ingredients</h3>
+            {% for ingredient in recipe.ingredients %}
+            <p>{{ ingredient }}</p>
+            {% endfor %}
+        </div>
+        <div class="col m12">
+            <h3>Preparation</h3>
+            {% for prep in recipe.preparation %}
+            <p>{{ prep }}</p>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row center-align">
+        <a class="waves-effect waves-light btn">Edit</a>
+        <a class="waves-effect waves-light btn">Delete</a>
+        <a class="waves-effect waves-light btn">Profile</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -91,3 +91,13 @@ a {
 .brand-logo:hover {
     color: #26a69a;
 }
+
+/* ------------------------------------------------------------------ recipe page with ingredients and prepation */
+
+.recipe-page {
+    margin-top: 2rem;
+}
+
+.recipe-image {
+    width: 100%;
+}
