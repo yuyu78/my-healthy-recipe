@@ -111,6 +111,7 @@ The schema for the database below:
 * [Materialize css 1.0.0](https://materializecss.com/)
 * [Flask](https://flask.palletsprojects.com/)
 * [Jquery](https://code.jquery.com/)
+* [Imgur](https://imgur.com/)
 
 ## Testing <a name="testing"></a>
 * When I use the url method on the link "home" of the navbar, it shows an error message in the console 
@@ -132,6 +133,8 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
     I contacted the tutor and adviced me to use the the get method like the code below:  
     *if not session.get("user") is None:*  
     In this code, we are checking if the get() method returned None. If it is not None, that means there is a user in the session.
+
+* The image stored Mongodb was not retrieved on the website. I found a solution on the Slack community by one student: host the image in the site [Imgur](https://imgur.com/) and store the URL on MongoDB.  
 
 ## Deployment <a name="deployment"></a>
 

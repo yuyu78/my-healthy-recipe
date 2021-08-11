@@ -17,30 +17,20 @@
     <!--list of recipe from user and other users-->
     <div class="container">
         <div class="row">
-            <a href="#">
+            {% for recipe in recipes %}
+            <a href="{{ url_for('show_recipe') }}">
                 <div class="col s12 m5 offset-m1 l4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/images/porridge.jpg">
+                            <img src="static/images/porridge.jpg" src="{{ recipe.image_url }}">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Name recipe</span>
+                            <span class="card-title">{{ recipe.recipe_name }}</span>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="#">
-                <div class="col s12 m5 offset-m1 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="static/images/porridge.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Name recipe</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
     </div>
 
