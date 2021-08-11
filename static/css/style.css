@@ -7,6 +7,20 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+/* ------------------------------------------------------------------ Navbar*/
+
+@media screen and (max-width: 568px) {
+    nav .brand-logo {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    nav .brand-logo {
+        margin-left: 20px;
+    }
+}
     
 /* ------------------------------------------------------------------ home page*/
 
