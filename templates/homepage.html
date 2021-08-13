@@ -11,6 +11,11 @@
             <h1>Welcome {{username}}!</h1>
             <p>You can search your favorites recipes below or add a new recipe by clicking <a href="{{ url_for('get_recipes') }}" class="teal-text">here</a></p>
             {% endif %}
+            {% for recipe in recipes %}
+            {{ recipe.recipe_name }}
+            {{ recipe.category_name }}
+            {{ recipe.ingredients }}
+            {% endfor %}
         </div>
     </div>
 

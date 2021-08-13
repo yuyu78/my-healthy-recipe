@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     if not session.get("user") is None:
         return render_template("homepage.html", username=session['user'])
     return render_template("homepage.html", recipes=recipes)
@@ -88,8 +88,13 @@ def logout():
 @app.route("/show_recipe")
 def show_recipe():
     #show the recipe page with ingredients and preration
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("show_recipe.html", recipes=recipes)
+
+
+@app.route("/add_recipe")
+def add_recipe():
+    return render_template("add_recipe.html")
 
 
 if __name__ == "__main__":
