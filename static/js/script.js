@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
+    $('.modal').modal();
+    $('select').formSelect();
   });
 
 (function () {
@@ -15,8 +17,3 @@ $(document).ready(function(){
         };
     };
 }());
-
-$(document).ready(function(){
-    $('.modal').modal();
-  });
-       
