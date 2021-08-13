@@ -23,7 +23,18 @@
     </div>
     <div class="row center-align">
         <a class="waves-effect waves-light btn">Edit</a>
-        <a class="waves-effect waves-light btn">Delete</a>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Delete</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to delete this recipe?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+            </div>
+        </div>
         <a class="waves-effect waves-light btn" href="{{ url_for('get_recipes') }}">Homepage</a>
     </div>
 </div>

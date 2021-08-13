@@ -101,3 +101,27 @@ a {
 .recipe-image {
     width: 100%;
 }
+
+/* button edit, delete and homepage */
+.recipe-page .modal-footer {
+    text-align: center;
+}
+
+/* delete modal message */
+.recipe-page .modal-close {
+    border: 2px solid black;
+    box-shadow: 2px 2px #888888;
+}
+
+.recipe-page .modal-close:hover {
+    background-color: #80cbc4;
+}
+
+.recipe-page .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+    margin: 6px 30px 10px;
+}
+
+.recipe-page .modal {
+    width: 35%;
+}
+
