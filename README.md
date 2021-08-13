@@ -141,12 +141,14 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
 ## Credits <a name="credits"></a>
 ---
 ### Inspiration
-The function register, login and logout are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
+The function register, login, logout, add recipe are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
 
 ### Code
 * Navbar from [Materializecss](https://materializecss.com/navbar.html)
 * Footer from [Materializecss](https://materializecss.com/footer.html)
 * Cards recipes from [Materializecss](https://materializecss.com/cards.html#)
+* Modal message from [Materializecss](https://materializecss.com/modals.html)
+* Select input from [Materializecss](https://materializecss.com/select.html)
 
 ### Media
 All the image are from [Unplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
