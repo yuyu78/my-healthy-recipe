@@ -100,11 +100,11 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "image": request.form.get("image"),
             "image_name": request.form.get("image_name"),
-            "ingredients": request.form.get("ingredients"),
-            "preparation": request.form.get("preparation"), 
+            "ingredients": [x for x in request.form.get("ingredients").split(',')],
+            "preparation": [x for x in request.form.get("ingredients").split(',')], 
             "created_by": session["user"] 
         }
-        mongo.db.recipes.insert_one(my_recipes)
+        mongo.db.recipes.insert_one(my_recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
