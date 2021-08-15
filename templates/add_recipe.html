@@ -27,13 +27,11 @@
                 </div>
             </div>
             <!-- Images attached -->
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Image</span>
-                    <input type="file" name="image">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" name="image_name" required>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="image_url" name="image_url" class="materialize-textarea" type="url"
+                        required></input>
+                    <label for="image_url">Enter an https:// URL for the image</label>
                 </div>
             </div>
             <!-- Ingredients -->
