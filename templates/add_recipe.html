@@ -5,7 +5,8 @@
 
 <div class="container add-recipe-page">
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+            <!-- Category -->
             <div class="row">
                 <div class="input-field col s12">
                     <select id="category_name" name="category_name" class="validate" required>
@@ -17,6 +18,7 @@
                     <label for="category_name">Category</label>
                 </div>
             </div>
+            <!-- Recipe Name-->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" class="materialize-textarea" type="text"
@@ -24,25 +26,39 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
+            <!-- Images attached -->
             <div class="file-field input-field">
                 <div class="btn">
                     <span>Image</span>
-                    <input type="file">
+                    <input type="file" name="image">
                 </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" required>
+                    <input class="file-path validate" type="text" name="image_name" required>
                 </div>
             </div>
+            <!-- Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="ingredients" id="ingredients" class="materialize-textarea" required></textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
+            <!-- Preparation -->
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="preparation" id="preparation" class="materialize-textarea" required></textarea>
                     <label for="preparation">Preparation</label>
+                </div>
+            </div>
+            <!-- button Add/Cancel -->
+            <div class="row">
+                <!-- button Add -->
+                <div class="col s2 offset-s3 center-align">
+                    <button type="submit" class="col s12 btn-large waves-effect waves-light">Add</button>
+                </div>
+                <!-- button Cancel -->
+                <div class="col s2 offset-s2  center-align">
+                    <button type="submit" class="col s12 btn-large waves-effect waves-light">Cancel</button>
                 </div>
             </div>
         </form>
