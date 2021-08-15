@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container recipe-page">
     <div class="row">
-        {% for recipe in recipes %}
+
         <div class="col m6 card-image">
             <img class="recipe-image" src="{{ recipe.image_url }}">
         </div>
@@ -19,7 +19,7 @@
             <p>{{ prep }}</p>
             {% endfor %}
         </div>
-        {% endfor %}
+
     </div>
     <div class="row center-align">
         <a class="waves-effect waves-light btn">Edit</a>

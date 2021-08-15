@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     if not session.get("user") is None:
-        return render_template("homepage.html", username=session['user'])
+        return render_template("homepage.html", username=session['user'], recipes=recipes)
     return render_template("homepage.html", recipes=recipes)
 
 
@@ -85,15 +85,29 @@ def logout():
     return redirect(url_for("get_recipes"))
 
 
-@app.route("/show_recipe")
-def show_recipe():
+@app.route("/show_recipe/<recipe_id>")
+def show_recipe(recipe_id):
     #show the recipe page with ingredients and preration
-    recipes = list(mongo.db.recipes.find())
-    return render_template("show_recipe.html", recipes=recipes)
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("show_recipe.html", recipe=recipe)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        my_recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "image": request.form.get("image"),
+            "image_name": request.form.get("image_name"),
+            "ingredients": request.form.get("ingredients"),
+            "preparation": request.form.get("preparation"), 
+            "created_by": session["user"] 
+        }
+        mongo.db.recipes.insert_one(my_recipes)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("get_recipes"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
