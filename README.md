@@ -136,6 +136,19 @@ To avoid this error message in the console, checked the solution in [Stackoverfl
 
 * The image stored Mongodb was not retrieved on the website. I found a solution on the Slack community by one student: host the image in the site [Imgur](https://imgur.com/) and store the URL on MongoDB.  
 
+* Each time I add the recipe, it will add in the same page after the first recipe like in the screenshot below:  
+![recipe bug](https://user-images.githubusercontent.com/76018052/129475114-f07d3835-b228-48e2-8e92-6c1b5150af4c.PNG)  
+The problem was because of the for loop added in the page show_recipe, to fix the issue: 
+1. Remove the for loop *for recipe in recipes* in the show_recipe.html
+2. Add the object id to the link of the recipe list so that the link pass the object id to the route  
+![recipe id](https://user-images.githubusercontent.com/76018052/129477781-2c05d934-0b67-42c8-a8e1-ae39530beb7b.png)
+
+
+* The list ingredients and the preparation were not showing on the page whe click on the recipe.  
+![not show](https://user-images.githubusercontent.com/76018052/129479121-6a3038e9-c36b-41e7-b40c-63b249073e77.PNG)   
+This is because I was using getlist method but the ingredients and preparation are string, so by the advice of a tutor, I split the string into a list.  
+![split list](https://user-images.githubusercontent.com/76018052/129478981-c0000f8b-1ea9-4c68-9ecf-d6ccfe0b80fd.PNG)  
+Because it needs a comma "," to split the string into a list, I added a note in the form to separate the ingredients and preparation with the comma.
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>
