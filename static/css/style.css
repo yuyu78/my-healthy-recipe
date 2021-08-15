@@ -136,3 +136,11 @@ a {
         width: 35%;
     }
 }
+
+.created-by {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #8080808c
+}
