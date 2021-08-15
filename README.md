@@ -91,6 +91,7 @@ The main color is light green and blue, which represents health, wellness, balan
 * Update username 
 * Filter recipe for Vegan people, allergen
 * Able to reset password if the user forgot 
+* Allow the user to upload image from the computer. This feature will be covered in the upcoming Fullstack with Django lesson so for the moment, I am using the input with the type=URL so that the image can be stored with the URL address.  
  
 ## Database <a name="database"></a>
 
