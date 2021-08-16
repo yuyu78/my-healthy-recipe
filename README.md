@@ -151,7 +151,6 @@ This is because I was using getlist method but the ingredients and preparation a
 ![split list](https://user-images.githubusercontent.com/76018052/129478981-c0000f8b-1ea9-4c68-9ecf-d6ccfe0b80fd.PNG)  
 Because it needs a comma "," to split the string into a list, I added a note in the form to separate the ingredients and preparation with the comma.
 
-* To deactivate the attribute "required" in add_recipe and edit_recipe page when the user click on Cancel button, find the solution [here](https://answers.laserfiche.com/questions/148878/How-To-Skip-Bypass-or-Disable-required-fields-validation-depending-on-user-choice) and use the method removeAttr() to remove the attribute "required".
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>
