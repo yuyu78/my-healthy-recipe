@@ -101,7 +101,7 @@ def add_recipe():
             "image": request.form.get("image"),
             "image_name": request.form.get("image_name"),
             "ingredients": [x for x in request.form.get("ingredients").split(',')],
-            "preparation": [x for x in request.form.get("ingredients").split(',')], 
+            "preparation": [x for x in request.form.get("preparation").split(',')], 
             "created_by": session["user"] 
         }
         mongo.db.recipes.insert_one(my_recipe)
