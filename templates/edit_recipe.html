@@ -12,7 +12,11 @@
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Choose Category</option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="category_name">Category</label>
@@ -22,7 +26,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" class="materialize-textarea" type="text"
-                        required></input>
+                        value="{{ recipe.recipe_name }}" required></input>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
@@ -30,21 +34,29 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="image_url" name="image_url" class="materialize-textarea" type="url"
-                        required></input>
+                    value="{{ recipe.image_url }}" required></input>
                     <label for="image_url">Enter an https:// URL for the image</label>
                 </div>
             </div>
             <!-- Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required></textarea>
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>
+                        {%- for ingredient in recipe.ingredients -%} 
+                        {{ ingredient }}, 
+                        {%- endfor -%}
+                    </textarea>
                     <label for="ingredients">Ingredients (Please separate the ingredients with the comma ",")</label>
                 </div>
             </div>
             <!-- Preparation -->
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="preparation" name="preparation" class="materialize-textarea" required></textarea>
+                    <textarea id="preparation" name="preparation" class="materialize-textarea" required>
+                        {%- for prep in recipe.preparation -%} 
+                        {{ prep }}, 
+                        {%- endfor -%}
+                    </textarea>
                     <label for="preparation">Preparation (Please separate the preparation with the comma ",")</label>
                 </div>
             </div>
@@ -52,11 +64,15 @@
             <div class="row">
                 <!-- button Add -->
                 <div class="col s2 offset-s3 center-align">
-                    <button type="submit" class="col s12 btn-large waves-effect waves-light">Edit</button>
+                    <button type="submit" class="col s12 btn-large waves-effect waves-light">
+                        Edit
+                    </button>
                 </div>
                 <!-- button Cancel -->
                 <div class="col s2 offset-s2  center-align">
-                    <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">Cancel</a>
+                    <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">
+                        Cancel
+                    </a>
                 </div>
             </div>
         </form>
