@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-darken-4 center-align">Edit recipe</h3>
+
+<div class="container edit-recipe-page">
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <!-- Category -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Category</label>
+                </div>
+            </div>
+            <!-- Recipe Name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="recipe_name" name="recipe_name" class="materialize-textarea" type="text"
+                        required></input>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+            <!-- Images attached -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="image_url" name="image_url" class="materialize-textarea" type="url"
+                        required></input>
+                    <label for="image_url">Enter an https:// URL for the image</label>
+                </div>
+            </div>
+            <!-- Ingredients -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required></textarea>
+                    <label for="ingredients">Ingredients (Please separate the ingredients with the comma ",")</label>
+                </div>
+            </div>
+            <!-- Preparation -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="preparation" name="preparation" class="materialize-textarea" required></textarea>
+                    <label for="preparation">Preparation (Please separate the preparation with the comma ",")</label>
+                </div>
+            </div>
+            <!-- button Add/Cancel -->
+            <div class="row">
+                <!-- button Add -->
+                <div class="col s2 offset-s3 center-align">
+                    <button type="submit" class="col s12 btn-large waves-effect waves-light">Edit</button>
+                </div>
+                <!-- button Cancel -->
+                <div class="col s2 offset-s2  center-align">
+                    <button type="submit" class="col s12 btn-large waves-effect waves-light" href="{{ url_for('show_recipe',recipe_id=recipe._id)  }}">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -127,7 +127,7 @@ a {
 
 /* ------------------------------------------------------------------ Add recipe page */
 
-.add-recipe-page {
+.add-recipe-page, .edit-recipe-page {
     max-width: 1000px;
 }
 
