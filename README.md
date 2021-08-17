@@ -145,11 +145,8 @@ The problem was because of the for loop added in the page show_recipe, to fix th
 ![recipe id](https://user-images.githubusercontent.com/76018052/129477781-2c05d934-0b67-42c8-a8e1-ae39530beb7b.png)
 
 
-* The list ingredients and the preparation were not showing on the page whe click on the recipe.  
-![not show](https://user-images.githubusercontent.com/76018052/129479121-6a3038e9-c36b-41e7-b40c-63b249073e77.PNG)   
-This is because I was using getlist method but the ingredients and preparation are string, so by the advice of a tutor, I split the string into a list.  
-![split list](https://user-images.githubusercontent.com/76018052/129478981-c0000f8b-1ea9-4c68-9ecf-d6ccfe0b80fd.PNG)  
-Because it needs a comma "," to split the string into a list, I added a note in the form to separate the ingredients and preparation with the comma.
+* To show the ingredients and preparation as a list, I added in CSS the style: "*white-space: pre-wrap;*" so that everytime the user will type enter after each ingreedient or preparation steps, it will show as a list.  
+In the page add_recipe, I added a note to return to the line by clicking enter in the ingredients and preparation input to aware the user. 
 
 ## Deployment <a name="deployment"></a>
 
