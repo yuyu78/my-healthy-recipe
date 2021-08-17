@@ -18,6 +18,7 @@
     <!-- Button Edit/Delete/Homepage-->
     <div class="row center-align">
         <!-- Edit button-->
+        {% if session.user|lower == recipe.created_by|lower %}
         <a class="waves-effect waves-light btn" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
         <!-- Delete button -->
         <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Delete</a>
@@ -31,6 +32,7 @@
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
                 </div>
             </div>
+        {% endif %}
         <!-- Homepage button -->
         <a class="waves-effect waves-light btn" href="{{ url_for('get_recipes') }}">Homepage</a>
     </div>
