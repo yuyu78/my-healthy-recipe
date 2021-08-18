@@ -148,6 +148,17 @@ The problem was because of the for loop added in the page show_recipe, to fix th
 * To show the ingredients and preparation as a list, I added in CSS the style: "*white-space: pre-wrap;*" so that everytime the user will type enter after each ingreedient or preparation steps, it will show as a list.  
 In the page add_recipe, I added a note to return to the line by clicking enter in the ingredients and preparation input to aware the user. 
 
+* Issue the the size of the card,: each card has different height as in thr screenshot below:  
+![card not align](https://user-images.githubusercontent.com/76018052/129977981-a7e2e3ed-89f9-495e-a2d2-9b7f95e4139f.PNG)  
+Found the solution in [Dogfalo's github](https://github.com/Dogfalo/materialize/issues/3814) : to fix the size issue, I have to set manually the height image using css style below:   
+*.card .card-image img {  
+    max-height:100%;  
+    height: 300px;  
+    object-fit: cover;  
+}*  
+The name of the user who created the recipe could be long so I put the recipe's name and user's name in different row.
+
+
 ## Deployment <a name="deployment"></a>
 
 ## Credits <a name="credits"></a>

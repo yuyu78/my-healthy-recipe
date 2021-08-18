@@ -24,12 +24,16 @@
                         <div class="card-image">
                             <img src="{{ recipe.image_url }}">
                         </div>
-                        <div class="card-content row">
-                            <div class="col s4">
-                                <span class="card-title">{{ recipe.recipe_name }}</span>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="card-title">{{ recipe.recipe_name }}</span>
+                                </div>
                             </div>
-                            <div class="col s4 offset-s4">
-                                <span class="created-by"><em>by: {{ recipe.created_by }}</em></span>
+                            <div class="row">
+                                <div class="col">
+                                    <span class="created-by"><em>by: {{ recipe.created_by }}</em></span>
+                                </div>
                             </div>
                         </div>
                     </div>
