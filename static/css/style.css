@@ -46,6 +46,12 @@ h1 {
     text-shadow: 2px 5px 6px #121312d4;
 }
 
+/* ------------------------------------------------------------------ Search bar in homepage*/
+
+.search-input {
+    margin-right: 3rem;
+}
+
 /* ------------------------------------------------------------------ recipes list in homepage*/
 
 a { 
