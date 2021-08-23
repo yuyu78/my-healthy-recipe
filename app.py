@@ -32,9 +32,13 @@ def get_recipes():
 def search():
     query = request.form.get("query")
     categories = request.form.getlist('categories')
-    print(categories)
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("homepage.html", recipes=recipes, categories=categories)
+    list_to_return = []
+    for recipe in recipes:
+        if recipe["category_name"] in categories:
+            list_to_return.append(recipe)
+    categories = list(mongo.db.categories.find())
+    return render_template("homepage.html", recipes=list_to_return, categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
