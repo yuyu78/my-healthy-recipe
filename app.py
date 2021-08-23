@@ -22,16 +22,20 @@ mongo = PyMongo(app)
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
+    categories = list(mongo.db.categories.find())
     if not session.get("user") is None:
-        return render_template("homepage.html", username=session['user'], recipes=recipes)
-    return render_template("homepage.html", recipes=recipes)
+        return render_template("homepage.html", username=session['user'], recipes=recipes, categories=categories)
+    return render_template("homepage.html", recipes=recipes, categories=categories)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    categories = request.form.getlist('categories')
+    print(categories)
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("homepage.html", recipes=recipes)
+    return render_template("homepage.html", recipes=recipes, categories=categories)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
