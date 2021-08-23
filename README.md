@@ -158,6 +158,14 @@ Found the solution in [Dogfalo's github](https://github.com/Dogfalo/materialize/
 }*  
 The name of the user who created the recipe could be long so I put the recipe's name and user's name in different row.
 
+* To filter the recipes that contain only the categories selected when the user is searching on the homepage:  
+The advice from the tutor is:  
+-make a new list  
+-iterate over the recipe we got from mongo  
+-check if the recipes category is in the list of the category the user selected  
+-if it is, add that recipe to the new list   
+Here is the code to allow to do this feature:  
+![for loop](https://user-images.githubusercontent.com/76018052/130477810-b42f8cc7-61a6-4376-bd7d-d76b84dec0d9.PNG)
 
 ## Deployment <a name="deployment"></a>
 
