@@ -37,6 +37,8 @@ def search():
     for recipe in recipes:
         if recipe["category_name"] in categories:
             list_to_return.append(recipe)
+        elif len(categories) < 1:
+            list_to_return.append(recipe)
     categories = list(mongo.db.categories.find())
     return render_template("homepage.html", recipes=list_to_return, categories=categories)
 
