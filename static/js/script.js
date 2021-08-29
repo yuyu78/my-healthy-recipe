@@ -18,4 +18,6 @@ $(document).ready(function(){
     };
 }());
 
-// If "cancel" button is clicked, remove the attribute "required"
+function formReset() {
+    document.getElementById("formAddRecipe").reset();
+}

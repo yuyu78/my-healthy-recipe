@@ -5,7 +5,7 @@
 
 <div class="container add-recipe-page">
     <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}" id="formAddRecipe">
             <!-- Category -->
             <div class="row">
                 <div class="input-field col s12">
@@ -54,8 +54,12 @@
                 <div class="col s2 offset-s3 center-align">
                     <button type="submit" class="col s12 btn-large waves-effect waves-light">Add</button>
                 </div>
+                <!-- button Reset -->
+                <div class="col s2 center-align">
+                    <a type="button" onclick="formReset()" value="Reset form" class="col s12 btn-large waves-effect waves-light">Reset</a>
+                </div>
                 <!-- button Cancel -->
-                <div class="col s2 offset-s2  center-align">
+                <div class="col s2 center-align">
                     <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">Cancel</a>
                 </div>
             </div>
