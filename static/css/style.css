@@ -161,3 +161,12 @@ a {
 .list-recipe {
     white-space: pre-wrap;
 }
+
+/* ------------------------------------------------------------------ Edit recipe page */
+
+/* Button Modal message */
+.modal-footer .btn:hover,
+.modal-footer .btn-large:hover,
+.modal-footer .btn-small:hover {
+    border: 1px solid #444;
+}
