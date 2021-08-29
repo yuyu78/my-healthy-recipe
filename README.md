@@ -165,7 +165,11 @@ The advice from the tutor is:
 -check if the recipes category is in the list of the category the user selected  
 -if it is, add that recipe to the new list   
 Here is the code to allow to do this feature:  
-![for loop](https://user-images.githubusercontent.com/76018052/130477810-b42f8cc7-61a6-4376-bd7d-d76b84dec0d9.PNG)
+![for loop](https://user-images.githubusercontent.com/76018052/130477810-b42f8cc7-61a6-4376-bd7d-d76b84dec0d9.PNG)  
+
+* The recipes didn´t render just by selecting the category. The tutor told me the reason is because of the variable *query = request.form.get("query")*, if the user doesn´t type anything in search input, then the variable query will be empty as I added *recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))*.  
+The solution is to add another condition as in the screenshot below (the code on highlight):  
+![if condition search](https://user-images.githubusercontent.com/76018052/131267101-01025f28-5595-4e38-a1c7-fb604eb088ac.PNG)
 
 ## Deployment <a name="deployment"></a>
 
