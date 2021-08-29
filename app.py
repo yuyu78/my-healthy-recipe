@@ -34,11 +34,19 @@ def search():
     categories = request.form.getlist('categories')
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     list_to_return = []
+    print(categories)
     for recipe in recipes:
         if recipe["category_name"] in categories:
             list_to_return.append(recipe)
         elif len(categories) < 1:
             list_to_return.append(recipe)
+    if len(recipes) < 1:
+        recipes = list(mongo.db.recipes.find())
+        for recipe in recipes:
+            if recipe["category_name"] in categories:
+                list_to_return.append(recipe)
+                print(recipe)        
+        #select_category = recipe
     categories = list(mongo.db.categories.find())
     return render_template("homepage.html", recipes=list_to_return, categories=categories)
 
