@@ -41,14 +41,14 @@
             <!-- Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required></textarea>
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" type="text" required>{{ recipe.ingredients }}</textarea>
                     <label for="ingredients">Ingredients (Please return to the line in each ingredient by clicking enter)</label>
                 </div>
             </div>
             <!-- Preparation -->
             <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="preparation" name="preparation" class="materialize-textarea" required></textarea>
+                    <textarea id="preparation" name="preparation" class="materialize-textarea" required>{{ recipe.preparation }}</textarea>
                     <label for="preparation">Preparation (Please return to the line in each ingredient by clicking enter</label>
                 </div>
             </div>
