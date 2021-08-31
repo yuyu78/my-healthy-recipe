@@ -84,7 +84,7 @@ The main color is light green and blue, which represents health, wellness, balan
 * By clicking on “delete”, it will appear a modal message “are you sure you want to delete this recipe?”
 * By clicking on “edit”
 
-**Features implemented left**
+**Features left to implement**
 
 * Able to share recipe in social media
 * Delete the account
@@ -169,7 +169,11 @@ Here is the code to allow to do this feature:
 
 * The recipes didn´t render just by selecting the category. The tutor told me the reason is because of the variable *query = request.form.get("query")*, if the user doesn´t type anything in search input, then the variable query will be empty as I added *recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))*.  
 The solution is to add another condition as in the screenshot below (the code on highlight):  
-![if condition search](https://user-images.githubusercontent.com/76018052/131267101-01025f28-5595-4e38-a1c7-fb604eb088ac.PNG)
+![if condition search](https://user-images.githubusercontent.com/76018052/131267101-01025f28-5595-4e38-a1c7-fb604eb088ac.PNG)  
+
+* To do a pagination, from the advice of the mentor, I created a list which contains sublists. These sublist contain 6 recipes maximum, so the sublists represent the page.  
+![pagination](https://user-images.githubusercontent.com/76018052/131577060-f5a9936a-b46f-4346-adf4-8ed13ce56780.PNG)
+
 
 ## Deployment <a name="deployment"></a>
 
