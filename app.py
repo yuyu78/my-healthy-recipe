@@ -19,13 +19,16 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
+@app.route("/get_recipes/<int:page>")
 def get_recipes():
+    page = 0
     recipes = list(mongo.db.recipes.find())
+    recipes = [recipes[i:i+6] for i in range(0, len(recipes), 6)]
+    recipes_page = recipes[page]
     categories = list(mongo.db.categories.find())
     if not session.get("user") is None:
         return render_template("homepage.html", username=session['user'], recipes=recipes, categories=categories)
-    return render_template("homepage.html", recipes=recipes, categories=categories)
+    return render_template("homepage.html", recipes_page=recipes_page, categories=categories, page=page, test=len(recipes))
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -34,7 +37,6 @@ def search():
     categories = request.form.getlist('categories')
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     list_to_return = []
-    print(categories)
     for recipe in recipes:
         if recipe["category_name"] in categories:
             list_to_return.append(recipe)
@@ -44,8 +46,7 @@ def search():
         recipes = list(mongo.db.recipes.find())
         for recipe in recipes:
             if recipe["category_name"] in categories:
-                list_to_return.append(recipe)
-                print(recipe)        
+                list_to_return.append(recipe)       
         #select_category = recipe
     categories = list(mongo.db.categories.find())
     return render_template("homepage.html", recipes=list_to_return, categories=categories)

@@ -45,11 +45,10 @@
                 </div>
             </form>
         </div>
-
-        {% if recipes|length > 0 %}
+        {% if recipes_page|length > 0 %}
         <!--list of recipe from user and other users-->
         <div class="row">
-            {% for recipe in recipes %}
+            {% for recipe in recipes_page %}
             <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">
                 <div class="col s12 m6 l4">
                     <div class="card">
@@ -73,6 +72,10 @@
             </a>
             {% endfor %}
         </div>
+        {% for val in recipe_page %}
+        <h3>{{ val }}</h3>
+        {% print(val) %}
+        {% endfor %}
         {% else %}
         <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
         {% endif %}
