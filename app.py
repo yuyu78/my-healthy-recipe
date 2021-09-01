@@ -1,4 +1,4 @@
-import os
+import os, math
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -20,15 +20,16 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/get_recipes/<int:page>")
-def get_recipes():
-    page = 0
+def get_recipes(page = 1):
+    to_recipe_no = page * 6
+    from_recipe_no = to_recipe_no - 6
     recipes = list(mongo.db.recipes.find())
-    recipes = [recipes[i:i+6] for i in range(0, len(recipes), 6)]
-    recipes_page = recipes[page]
+    show_recipes = recipes[from_recipe_no:to_recipe_no]
+    number_of_pages = math.ceil(len(recipes) / 6)
     categories = list(mongo.db.categories.find())
     if not session.get("user") is None:
-        return render_template("homepage.html", username=session['user'], recipes=recipes, categories=categories)
-    return render_template("homepage.html", recipes_page=recipes_page, categories=categories, page=page, test=len(recipes))
+        return render_template("homepage.html", username=session['user'], recipes=show_recipes, categories=categories, number_of_pages=number_of_pages, page=page)
+    return render_template("homepage.html", recipes=show_recipes, categories=categories, number_of_pages=number_of_pages, page=page)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -47,9 +48,8 @@ def search():
         for recipe in recipes:
             if recipe["category_name"] in categories:
                 list_to_return.append(recipe)       
-        #select_category = recipe
     categories = list(mongo.db.categories.find())
-    return render_template("homepage.html", recipes=list_to_return, categories=categories)
+    return render_template("homepage.html", recipes=list_to_return, categories=categories, search=True)
 
 
 @app.route("/register", methods=["GET", "POST"])
