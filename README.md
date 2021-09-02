@@ -117,7 +117,7 @@ The schema for the database below:
 ---
 ## Testing <a name="testing"></a>
 ---
-
+The testing process can be found [here](https://github.com/yuyu78/my-healthy-recipe/blob/main/TESTING.md)
 ---
 ## Deployment <a name="deployment"></a>
 ---
