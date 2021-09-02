@@ -112,15 +112,29 @@ a {
     object-fit: cover;
 }
 
-.card-content .row {
+.card-content .row 
     margin-bottom: 0px;
 }
 
 /* ------------------------------------------------------------------ flash message Login/Register */
 
+/* flash message */
+
 .flashes h4 {
     line-height: 2;
 }
+
+/* margin-bottom end the page */
+
+@media screen and (max-width: 568px) {
+    .register-login {
+        margin-bottom: 30px;
+    }
+    form.col.s12.m8.offset-m2 {
+        padding: 15px;
+    }
+}
+
 
 /* ------------------------------------------------------------------ show_recipe page with ingredients and prepation */
 
