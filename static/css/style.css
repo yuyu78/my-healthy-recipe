@@ -179,6 +179,13 @@ a {
     white-space: pre-wrap;
 }
 
+/*Ajust input ingredient and preparation on mobile size */
+@media screen and (max-width: 568px) {
+    .textarea-add > label {
+        top: -10px;
+    }
+}
+
 /* ------------------------------------------------------------------ Edit recipe page */
 
 /* Button Modal message */
@@ -194,3 +201,4 @@ a {
         margin-top: 10px;
     }
 }
+
