@@ -225,3 +225,10 @@ a {
     }
 }
 
+/*Modal message */
+@media screen and (max-width: 568px) {
+    .recipe-page .modal {
+        width: 70%;
+    }
+}
+
