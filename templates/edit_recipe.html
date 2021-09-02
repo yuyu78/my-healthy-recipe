@@ -62,7 +62,7 @@
                 </div>
                 <!-- button Cancel -->
                 <div class="col s5 m2 offset-m2 center-align">
-                    <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">
+                    <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">
                         Cancel
                     </a>
                 </div>
