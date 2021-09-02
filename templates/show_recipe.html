@@ -2,15 +2,15 @@
 {% block content %}
 <div class="container recipe-page">
     <div class="row">
-        <div class="col m6 card-image">
+        <div class="col s12 m6 card-image">
             <img class="recipe-image" src="{{ recipe.image_url }}">
         </div>
-        <div class="col m6">
+        <div class="col s12 m6">
             <h2>{{ recipe.recipe_name }}</h2>
             <h3>Ingredients</h3>
             <p class="list-recipe">{{ recipe.ingredients }}</p>
         </div>
-        <div class="col m12">
+        <div class="col s12">
             <h3>Preparation</h3>
             <p class="list-recipe">{{ recipe.preparation }}</p>
         </div>
