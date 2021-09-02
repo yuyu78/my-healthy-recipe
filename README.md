@@ -172,6 +172,8 @@ Here is the code to allow to do this feature:
 The solution is to add another condition as in the screenshot below (the code on highlight):  
 ![if condition search](https://user-images.githubusercontent.com/76018052/131267101-01025f28-5595-4e38-a1c7-fb604eb088ac.PNG)  
 
+* To align the pagination horizontally, I checked in [developer mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Pagination) and copy paste the code below:  
+![copy paginatino](https://user-images.githubusercontent.com/76018052/131819758-687a0534-5d2d-4014-bbc7-b87f27b15fb7.PNG)
 
 ## Deployment <a name="deployment"></a>
 
