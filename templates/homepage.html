@@ -73,13 +73,17 @@
             {% endfor %}
         </div>
             {% if not search %}
-                {% for n in range(number_of_pages) %}
-                    {% if n+1 == page %}
-                        <h1><a href="/get_recipes/{{ n + 1}}" class="teal-text">{{ n+1 }}</a></h1>
-                    {% else %}
-                        <h2><a href="/get_recipes/{{ n + 1}}" class="teal-text">{{ n+1 }}</a></h2>
-                    {% endif %}
-                {% endfor %}
+            <div>
+                <ul class="pagination">
+                    {% for n in range(number_of_pages) %}
+                        {% if n+1 == page %}
+                            <li><a href="/get_recipes/{{ n + 1}}" class="teal-text active">{{ n+1 }}</a></li>
+                        {% else %}
+                            <li><a href="/get_recipes/{{ n + 1}}" class="teal-text">{{ n+1 }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
             {% endif %}
         {% else %}
         <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
