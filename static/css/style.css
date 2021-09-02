@@ -211,7 +211,7 @@ a {
 
 /* Textarea */
 @media screen and (max-width: 568px) {
-    textarea.materialize-textarea {
+    textarea.mt-textarea {
         margin-top: 10px;
     }
 }
