@@ -1,5 +1,3 @@
-# Credit: Code Institute Mini Project | Putting It All Together : Registration, Login, Logout, Add, Edit, Delete, Search
-
 import os, math
 from flask import (
     Flask, flash, render_template,
@@ -20,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# -------------------------------------- Homepage
+# -------------------------------------- Homepage with all recipes
 @app.route("/")
 @app.route("/get_recipes/<int:page>")
 def get_recipes(page = 1):
@@ -47,7 +45,7 @@ def get_recipes(page = 1):
                             page=page)
 
 
-# Seach function in homepage
+# -------------------------------------- Search in homepage
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -74,7 +72,7 @@ def search():
                             search=True)
 
 
-# -------------------------------------- Regiatration
+# -------------------------------------- Registration
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -135,10 +133,10 @@ def logout():
     return redirect(url_for("get_recipes"))
 
 
-# -------------------------------------- show_recipe.html(after clicking of one recipe in the homepage)
+# -------------------------------------- show_recipe.html(after clicking one recipe in the homepage)
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
-    #show the recipe page with ingredients and preparation
+    #show the recipe page with image, name, ingredients and preparation
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("show_recipe.html", recipe=recipe)
 

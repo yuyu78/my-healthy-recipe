@@ -126,7 +126,7 @@ The testing process can be found [here](https://github.com/yuyu78/my-healthy-rec
 ## Credits <a name="credits"></a>
 ---
 ### Inspiration
-The function register, login, logout, add recipe are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
+Few part of the python code on the function register, login, logout, add, edit, delete, search are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
 
 ---
 ### Code
