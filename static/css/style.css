@@ -232,3 +232,14 @@ a {
     }
 }
 
+/* ------------------------------------------------------------------ Error page*/
+
+.error-background {
+    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-error.jpg");
+    width: 100%;
+    height: 80vh; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
+} 
