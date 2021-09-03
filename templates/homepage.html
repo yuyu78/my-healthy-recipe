@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--Heroes images-->
+    <!-- Heroes images -->
     <div class="hero-image row valign-wrapper">
+        <!-- Welcome message -->
         <div class="col s12 center-align text-shadow">
+            <!-- Message without login -->
             {% if not session['user'] %}
             <h1>Welcome to my Heatlhy Recipe!</h1>
             <p>To create your favorites healthy recipes, register  <a href="{{ url_for('register') }}" class="teal-text">here</a></p>
+            <!-- Message if user login -->
             {% else %}
             <h1>Welcome {{username}}!</h1>
             <p>You can search your favorites recipes below or add a new recipe by clicking <a href="{{ url_for('add_recipe') }}" class="teal-text">here</a></p>
@@ -15,16 +18,18 @@
     </div>
 
     <div class="container">
-        <!--Search bar-->
+        <!-- Search bar -->
         <div class="row search-input">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
                 <div class="row valign-wrapper">
                     <div class="col s12">
+                        <!-- Search input -->
                         <div class="input-field col s12 m8">
                             <i class="fas fa-search prefix"></i>
                             <input type="text" name="query" id="query" minlength="3" class="validate grey lighten-5">
                             <label for="query">Search Recipes</label>
                         </div>
+                        <!-- Select category -->
                         <div class="input-field col s9 offset-s2 m4">
                             <select multiple name="categories" id="categories">
                                 <option value="" disabled selected>Category</option>
@@ -36,11 +41,14 @@
                         </div>
                     </div>
                 </div>
+                <!-- Reset and Search buttons -->
                 <div class="row">
                     <div class="col s12 center-align">
+                        <!-- Reset button -->
                         <a href="{{ url_for('get_recipes') }}" class="red btn text-shadow">
                             <i class="fas fa-undo left"></i> Reset
                         </a>
+                        <!-- Search button -->
                         <button type="submit" class="light-blue darken-1 btn text-shadow">
                             <i class="fas fa-search left"></i> Search
                         </button>
@@ -49,21 +57,25 @@
             </form>
         </div>
         {% if recipes|length > 0 %}
-        <!--list of recipe from user and other users-->
+        <!-- List of recipe from user and other users -->
         <div class="row">
             {% for recipe in recipes %}
             <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">
                 <div class="col s12 m6 l4">
                     <div class="card">
+                        <!-- Image recipe -->
                         <div class="card-image">
                             <img src="{{ recipe.image_url }}">
                         </div>
+                        <!-- Content recipe -->
                         <div class="card-content">
+                            <!-- Recipe name -->
                             <div class="row">
                                 <div class="col">
                                     <span class="card-title">{{ recipe.recipe_name }}</span>
                                 </div>
                             </div>
+                            <!-- User´s name -->
                             <div class="row">
                                 <div class="col">
                                     <span class="created-by"><em>by: {{ recipe.created_by }}</em></span>
@@ -76,6 +88,7 @@
             {% endfor %}
         </div>
             {% if not search %}
+            <!-- Pagination -->
             <div>
                 <ul class="pagination">
                     {% for n in range(number_of_pages) %}
@@ -89,6 +102,7 @@
             </div>
             {% endif %}
         {% else %}
+        <!-- If user searchs a recipe that doens´t exist -->
         <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
         {% endif %}
     </div>

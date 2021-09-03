@@ -18,7 +18,7 @@
                     <label for="category_name">Category</label>
                 </div>
             </div>
-            <!-- Recipe Name-->
+            <!-- Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" class="materialize-textarea" type="text"
@@ -26,7 +26,7 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
-            <!-- Images attached -->
+            <!-- Url image -->
             <div class="row">
                 <div class="input-field col s12">
                     <input id="image_url" name="image_url" class="materialize-textarea" type="url"
@@ -48,17 +48,17 @@
                     <label for="preparation">Preparation (Please return to the line in each ingredient by clicking enter)</label>
                 </div>
             </div>
-            <!-- button Add/Cancel -->
+            <!-- Buttons Add/Cancel -->
             <div class="row">
-                <!-- button Add -->
+                <!-- Button Add -->
                 <div class="col s4 m2 offset-m3 center-align">
                     <button type="submit" class="col s12 btn-large waves-effect waves-light">Add</button>
                 </div>
-                <!-- button Reset -->
+                <!-- Button Reset -->
                 <div class="col s4 m2 center-align">
                     <a type="button" onclick="formReset()" value="Reset form" class="col s12 btn-large waves-effect waves-light">Reset</a>
                 </div>
-                <!-- button Cancel -->
+                <!-- Button Cancel -->
                 <div class="col s4 m2 center-align">
                     <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">Cancel</a>
                 </div>

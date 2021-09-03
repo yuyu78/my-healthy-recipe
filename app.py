@@ -1,3 +1,5 @@
+# Credit: Code Institute Mini Project | Putting It All Together : Registration, Login, Logout, Add, Edit, Delete, Search
+
 import os, math
 from flask import (
     Flask, flash, render_template,
@@ -18,20 +20,34 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# -------------------------------------- Homepage
 @app.route("/")
 @app.route("/get_recipes/<int:page>")
 def get_recipes(page = 1):
+    # Pagination
     to_recipe_no = page * 6
     from_recipe_no = to_recipe_no - 6
     recipes = list(mongo.db.recipes.find())
     show_recipes = recipes[from_recipe_no:to_recipe_no]
     number_of_pages = math.ceil(len(recipes) / 6)
+
     categories = list(mongo.db.categories.find())
+    # If user is logged in
     if not session.get("user") is None:
-        return render_template("homepage.html", username=session['user'], recipes=show_recipes, categories=categories, number_of_pages=number_of_pages, page=page)
-    return render_template("homepage.html", recipes=show_recipes, categories=categories, number_of_pages=number_of_pages, page=page)
+        return render_template("homepage.html", 
+                                username=session['user'], 
+                                recipes=show_recipes, 
+                                categories=categories, 
+                                number_of_pages=number_of_pages, 
+                                page=page)
+    return render_template("homepage.html", 
+                            recipes=show_recipes, 
+                            categories=categories, 
+                            number_of_pages=number_of_pages, 
+                            page=page)
 
 
+# Seach function in homepage
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -39,19 +55,26 @@ def search():
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     list_to_return = []
     for recipe in recipes:
+        # If search by typing search input and selecting category
         if recipe["category_name"] in categories:
             list_to_return.append(recipe)
+        # If search without selecting category 
         elif len(categories) < 1:
             list_to_return.append(recipe)
+    # If search without input search
     if len(recipes) < 1:
         recipes = list(mongo.db.recipes.find())
         for recipe in recipes:
             if recipe["category_name"] in categories:
                 list_to_return.append(recipe)       
     categories = list(mongo.db.categories.find())
-    return render_template("homepage.html", recipes=list_to_return, categories=categories, search=True)
+    return render_template("homepage.html", 
+                            recipes=list_to_return, 
+                            categories=categories, 
+                            search=True)
 
 
+# -------------------------------------- Regiatration
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -76,6 +99,7 @@ def register():
     return render_template("register.html")
 
 
+# -------------------------------------- Login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -102,6 +126,7 @@ def login():
     return render_template("login.html")
 
 
+# -------------------------------------- Logout
 @app.route("/logout")
 def logout():
     #remove user from session cookies
@@ -110,13 +135,15 @@ def logout():
     return redirect(url_for("get_recipes"))
 
 
+# -------------------------------------- show_recipe.html(after clicking of one recipe in the homepage)
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
-    #show the recipe page with ingredients and preration
+    #show the recipe page with ingredients and preparation
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("show_recipe.html", recipe=recipe)
 
 
+# -------------------------------------- Add_recipe.html
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -136,6 +163,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# -------------------------------------- edit_recipe.html
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -155,6 +183,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Delete function
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})

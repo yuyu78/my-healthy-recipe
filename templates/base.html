@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <!-- top navbar -->
+        <!-- Top navbar -->
         <nav class="teal lighten-3">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">My Healthy Recipe</a>
@@ -22,17 +22,17 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
 
-        <!-- mobile side navbar -->
+        <!-- Mobile side navbar -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             {% if session.user %}
@@ -46,7 +46,7 @@
     </header>
 
     <section>
-        <!-- flash messages -->
+        <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -63,28 +63,36 @@
         {% endblock %}
     </main>
 
+    <!-- Footer -->    
     <footer class="page-footer teal lighten-3">
         <div class="container">
             <div class="row">
+                <!-- Name of the website and advertise sentence -->
                 <div class="col l6 s12 m6">
                     <h5>My Healthy Recipe</h5>
                     <p class="grey-text text-lighten-4" ><i>Eat, enjoy healthy food and get inpired.</i></p>
                 </div>
+                <!-- Social media links -->
                 <div class="col l4 offset-l2 s12 m6">
                     <h5>Follow us</h5>
                     <ul class="list-inline">
+                        <!-- Facebook -->
                         <li><a target="_blank" href="https://www.facebook.com/" rel="noopener">
                             <i class="fab fa-facebook-square" aria-hidden="true"></i>
                         </a></li>
+                        <!-- Instagram -->
                         <li><a target="_blank" href="https://www.instagram.com/" rel="noopener">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a></li>
+                        <!-- Twitter -->
                         <li><a target="_blank" href="https://twitter.com/" rel="noopener">
                             <i class="fab fa-twitter-square" aria-hidden="true"></i>
                         </a></li>
+                        <!-- Linkedin -->
                         <li><a target="_blank" href="https://ie.linkedin.com/" rel="noopener">
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a></li>
+                        <!-- Pinterest -->
                         <li><a target="_blank" href="https://www.pinterest.com/" rel="noopener">
                             <i class="fab fa-pinterest-square" aria-hidden="true"></i>
                         </a></li>
@@ -92,9 +100,10 @@
                 </div>
             </div>
         </div>
+        <!-- Copyright -->
         <div class="footer-copyright teal lighten-3">
             <div class="container">
-                © 2014 Copyright Text
+                © 2021 My Healthy Recipe, Code Institute
             </div>
         </div>
     </footer>
