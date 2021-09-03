@@ -60,3 +60,8 @@ The solution is to add another condition as in the screenshot below (the code on
 
 * To align the pagination horizontally, I checked in [developer mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Pagination) and copy paste the code below:  
 ![copy paginatino](https://user-images.githubusercontent.com/76018052/131819758-687a0534-5d2d-4014-bbc7-b87f27b15fb7.PNG)
+
+* On mobile size on edit page, there was spaces above and below the URL input  
+![edit url](https://user-images.githubusercontent.com/76018052/132046991-21460488-a995-4314-8688-d5622a2d3ddb.PNG)
+The issue comes from materialize, so to get rid of these spaces of the URL input, I added a style with smaller height in HTML in the URL input tag:  
+ *<input id="image_url" name="image_url" type="url"value="{{ recipe.image_url }}" required style="height: 54px;"></input>*
