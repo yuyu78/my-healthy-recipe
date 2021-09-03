@@ -139,7 +139,13 @@ a {
 /* ------------------------------------------------------------------ show_recipe page with ingredients and prepation */
 
 .recipe-page {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.recipe-page h2 {
+    text-decoration-line: underline;
+    text-decoration-color: #80cbc4;
 }
 
 .recipe-image {
@@ -200,6 +206,8 @@ a {
 
 .list-recipe {
     white-space: pre-wrap;
+    font-size: 17px;
+    font-weight: 450;
 }
 
 /*Ajust input ingredient and preparation on mobile size */
