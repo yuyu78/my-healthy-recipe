@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // jQuery sections from Materalize
     $(".sidenav").sidenav({edge: "right"});
     $('.modal').modal();
     $('select').formSelect();
@@ -12,6 +13,8 @@ $(document).ready(function(){
     }
   });
 
+// Credit: Stackoverflow https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961
+// To avoid error message
 (function () {
     if (typeof EventTarget !== "undefined") {
         let func = EventTarget.prototype.addEventListener;
