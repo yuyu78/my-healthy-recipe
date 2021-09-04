@@ -2,6 +2,41 @@
 
 [README file](https://github.com/yuyu78/my-healthy-recipe/blob/main/README.md)  
 
+## Devices tested
+---
+Devices tested during the project: 
+* Desktop
+* Moto G4 
+* Galaxy S5
+* Pixel 2
+* Pixel 2Xl
+* Iphone 5/SE 
+* Iphone 6/7/8
+* Iphone x
+* Ipad 
+* Ipad Pro
+* Surface Duo
+* Galaxy Fold
+
+## Testing User Stories
+---
+
+## Manual Testing
+---
+### Homepage  
+1. The homepage is responsive in all devices.  
+2. Search and select category    
+
+| Search Input | Select Category | Result |  
+| --- | --- | --- | 
+| Type keyword | Select category | If the keyword is for example "porridge" which is in mongodb and select the category breakfast, the recipe porridge will appear. If the keyword is not available in mongodb or doesn´t match with the category (for example, select category starter and there is no recipe called "porridge" in starter category), there will be a message "No Results found".|  
+| Type keyword | Without selecting category | It will appear all the recipes related to the keyword without taking account of the category. For example, if I type "milk", it will show all the recipe with milk. |  
+| No keyword | Select one or multiple category | If the user just select one or multiple category, it will show all the recipes related to the category (or categories) selected| 
+
+If type a keyword in search input and select category, it will render the result if available in the database.  
+3.If type keyword in search input without selecting category, it will render the result. 
+
+---
 * When I use the url method on the link "home" of the navbar, it shows an error message in the console 
 ![error message violation console](https://user-images.githubusercontent.com/76018052/128433103-67578485-901a-42e0-9ba1-e190fae5b67a.PNG)  
 To avoid this error message in the console, checked the solution in [Stackoverflow](https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961) and added in script.js file the code below:  
