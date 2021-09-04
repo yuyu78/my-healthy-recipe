@@ -28,12 +28,11 @@ b.[Wireframe](#wireframe)
 ### User Stories <a name="user-stories"></a>
 
 As a **first-time visitor**, I want:
-* To have easy and clear information about the website
-* To view the recipe
-* For Vegan people, to be able to view Vegan recipe 
-* To find the recipe I want by typing the keyword in the search bar 
-* To search some recipe by choosing the category
-* To create an account to access more functionality like creating, updating, deleting and saving recipe
+* To have easy and clear information so I know quickly how to use the website
+* To view the recipe so I can check the ingredients and preparation to cook
+* To find a recipe by typing the keyword in the search bar so I can choose the recipe I want
+* To search some recipe by choosing the category so I can search easily based on the category
+* To create an account to access more functionality so I can create, add, edit and delete recipes
 
 As a **returning visitor**, I want:
 * To pin my favorite recipe from my own recipe book or from other user
@@ -69,29 +68,26 @@ The main color is light green and blue, which represents health, wellness, balan
 
 **Existing Features** 
 
-* Each page has a responsive fixed navigation bar with recipes(which is the home page), favorites, login and register.
+* Each page has a responsive fixed navigation bar with recipes(in the home page), login and register.
 * Each page has a footer with the name of the website, copyright and social media link
 * Search a recipe by typing the keyword and/or choosing the category: starter, main, desert, snack, drink
-* The user can click on the button “reset” to reset the the research
-* Register page to create an account with an username, password, and confirm password
+* The user can click on the button “reset” to reset the research
+* Register page to create an account with an username, password
 * Login page with the input username and password
-* When the user registered or login, it will direct to the home page with different navbar: Home, profile,New recipe, Favorites, Log out 
+* When the user registered or login, it will direct to the home page with different navbar: Home, Add recipe, Log out 
 * Add pagination to not overwhelm the website 
-* Able to save a recipe by clicking on the heart icon, this feature is available for user who logs in to the website
-* If the user is not registered and click on the heart icon, it will direct to the register page 
-* The user can check their own recipe by clicking on the profile in the navbar
-* To modify or delete recipes, the user has to click on one recipe in the profile and click on the option either “edit” or “delete”. The button “profile” is available to able the user to come back to the profile page
+* To modify or delete recipes, the user has to click on one their own recipe and click on the option either “edit” or “delete”. 
 * By clicking on “delete”, it will appear a modal message “are you sure you want to delete this recipe?”
-* By clicking on “edit”
+* By clicking on “edit”, it will appear the edit page with 2 buttons on the bottom: "edit" to comfirm the modification or "cancel" 
 
 **Features left to implement**
 
 * Able to share recipe in social media
 * Delete the account
 * Update username 
-* Filter recipe for Vegan people, allergen
-* Able to reset password if the user forgot 
-* Allow the user to upload image from the computer. This feature will be covered in the upcoming Fullstack with Django lesson so for the moment, I am using the input with the type=URL so that the image can be stored with the URL address.  
+* Able to save the favorites recipes
+* Able to reset password if thomputer. This feature will be covered in the upcoming Fullstack with Django lesson so for the moment, I am using the input with the type=URL so that the image cane user forgot 
+* Allow the user to upload image from the c be stored with the URL address.  
 * Add pagination if the search result exceeds more than 6 recipes. For the moment, when the user searchs a recipe, it will show the result without pagination. 
  
 ## Database <a name="database"></a>
