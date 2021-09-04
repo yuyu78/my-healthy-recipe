@@ -92,8 +92,8 @@ The main color is light green and blue, which represents health, wellness, balan
  
 ## Database <a name="database"></a>
 
-The schema for the database below: 
-![Database Schema](https://user-images.githubusercontent.com/76018052/128268702-08d6f61b-38bf-4a5e-8f48-50a35c41fc18.PNG)
+The schema for the database below:   
+![schema mongodb](https://user-images.githubusercontent.com/76018052/132092572-e1b18587-18ab-411d-a9c8-f2d9b4d108ec.PNG)
 
 
 
