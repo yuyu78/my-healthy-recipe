@@ -23,18 +23,47 @@ Devices tested during the project:
 
 ## Manual Testing
 ---
+### Navigation bar  
+1. Check if the link "My healthy recipe" will change the color when hover and check if after clicking on this link. it will direct to the homepage  
+2. Check if all the link on the right side of the navbar will change the background color agter hovering 
+3. Check if on mobile size and Ipad, it will collapse to hamburger
+4. User in sesion and not in session  
+User in session:  
+In the navbar on the right, it will appear the homepage, add recipe and logout.  
+When the user logged out, check thatt the message "You have been logged out
+" will render  
+
+User not in session:  
+It will appear in the navbar: homepage, Login, register.  
+The welcome message "Welcome to my Heatlhy Recipe! To create your favorites healthy recipes, register here" with a link in "here" which will direct to the register page
+
+
 ### Homepage  
-1. The homepage is responsive in all devices.  
+1. Check if the homepage is responsive in all devices.  
 2. Search and select category    
 
 | Search Input | Select Category | Result |  
 | --- | --- | --- | 
-| Type keyword | Select category | If the keyword is for example "porridge" which is in mongodb and select the category breakfast, the recipe porridge will appear. If the keyword is not available in mongodb or doesn´t match with the category (for example, select category starter and there is no recipe called "porridge" in starter category), there will be a message "No Results found".|  
+| Type keyword | Select one or multiple category| If the keyword is for example "porridge" which is in mongodb and select the category breakfast, the recipe porridge will appear. If the keyword is not available in mongodb or doesn´t match with the category (for example, select category starter and there is no recipe called "porridge" in starter category), there will be a message "No Results found".|  
 | Type keyword | Without selecting category | It will appear all the recipes related to the keyword without taking account of the category. For example, if I type "milk", it will show all the recipe with milk. |  
 | No keyword | Select one or multiple category | If the user just select one or multiple category, it will show all the recipes related to the category (or categories) selected| 
 
-If type a keyword in search input and select category, it will render the result if available in the database.  
-3.If type keyword in search input without selecting category, it will render the result. 
+3. Buttons Reset and Search   
+**Search button**  
+When the user clicks on the search button after typing keyword in search input or selecting category or both, it will appear either the result if available on Mongodb, or will render a message "No Results Found".  
+**Reset button**       
+After showing the result, by typing on reset button, it will reset and display all the recipes available.  
+If the user is on the next page and click on reset button, it will direct to the first page.   
+
+4. Recipe list  
+When hover to one recipe, it will show the box shadow color in blue. 
+By clicking on one recipe, it will direct to the page show_recipe, with the name, picture, ingredient and preparation.    
+
+5. Pagination
+Check by clicking in the next page that the background color of the number of page related is changing.   
+![pagination color](https://user-images.githubusercontent.com/76018052/132110269-6b70e73c-f6d8-42a7-9b76-3b5246859060.PNG)
+
+
 
 ---
 * When I use the url method on the link "home" of the navbar, it shows an error message in the console 
