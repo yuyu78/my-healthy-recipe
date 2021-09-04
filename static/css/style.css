@@ -8,6 +8,12 @@ body {
     flex: 1 0 auto;
   }
 
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 90%;
+    }
+}
+
 /* ------------------------------------------------------------------ Navbar*/
 
 @media screen and (max-width: 568px) {
@@ -20,47 +26,6 @@ body {
     nav .brand-logo {
         margin-left: 20px;
     }
-}
-    
-/* ------------------------------------------------------------------ home page*/
-
-.hero-image {
-    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-image.jpg");
-    width: 100%;
-    height: 80vh; 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-} 
-
-h1 {
-    margin-top: 0;
-}
-
-.hero-image p {
-    font-size: 2rem;
-}
-
-.text-shadow {
-    text-shadow: 2px 5px 6px #121312d4;
-}
-
-/* -------------------------------------Pagination */
-.pagination {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 30px 0;
-    display: flex;
-    justify-content: center
-}
-        
-.pagination li {
-    margin: 0 1px;
-}
-
-.pagination li a.active {
-    background-color:#d1ecea;
 }
 
 /* ------------------------------------------------------------------ footer */
@@ -89,13 +54,72 @@ h1 {
     color: #26a69a;
 }
 
-/* ------------------------------------------------------------------ Search in homepage*/
+/* ------------------------------------------------------------------ Home page*/
+
+.hero-image {
+    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-image.jpg");
+    width: 100%;
+    height: 80vh; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+
+.hero-image h1 {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 568px) {
+    .hero-image h1 {
+        font-size: 3rem;
+    }
+    nav .brand-logo {
+        font-size: 1.2rem;
+    }
+}
+
+.hero-image p {
+    font-size: 2rem;
+}
+
+.text-shadow {
+    text-shadow: 2px 5px 6px #121312d4;
+}
+
+/* -------------------------------------Pagination */
+
+.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 30px 0;
+    display: flex;
+    justify-content: center
+}
+        
+.pagination li {
+    margin: 0 1px;
+}
+
+.pagination li a.active {
+    background-color:#d1ecea;
+}
+
+/* ------------------------------------- Search in homepage*/
 
 .search-input {
     margin: 10px;
 }
 
-/* ------------------------------------------------------------------ recipes list in homepage*/
+/* ------------------------------------- Buttons homepage*/
+
+@media screen and (max-width: 280px) {
+    .search-input .red {
+        margin-bottom: 10px;
+    }
+}
+
+/* ----------------------------------------recipes list in homepage*/
 
 a { 
     color: black; 
@@ -108,7 +132,7 @@ a {
 
 .card .card-image img {
     max-height:100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -210,10 +234,19 @@ a {
     font-weight: 450;
 }
 
-/*Ajust input ingredient and preparation on mobile size */
+/*Ajust mobile size */
 @media screen and (max-width: 568px) {
     .textarea-add > label {
         top: -10px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .textarea-add>label {
+        top: -23px;
+    }
+    .buttons .s4 {
+        padding: 0 .40rem;
     }
 }
 
@@ -237,6 +270,20 @@ a {
 @media screen and (max-width: 568px) {
     .recipe-page .modal {
         width: 70%;
+    }
+}
+
+/* ------------------------------------------------------------------ Buttons on edit, add and show_recipe page */
+
+@media screen and (min-height: 1024px) {
+    .buttons {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .home-btn {
+        margin-top: 10px;
     }
 }
 
