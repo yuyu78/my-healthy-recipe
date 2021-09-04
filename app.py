@@ -30,7 +30,7 @@ def get_recipes(page = 1):
     number_of_pages = math.ceil(len(recipes) / 6)
 
     categories = list(mongo.db.categories.find())
-    # If user is logged in
+    # If user is logged in or registered
     if not session.get("user") is None:
         return render_template("homepage.html", 
                                 username=session['user'], 
@@ -93,7 +93,7 @@ def register():
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        return render_template("homepage.html")
+        return redirect(url_for("get_recipes"))
     return render_template("register.html")
 
 
