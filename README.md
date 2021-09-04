@@ -4,6 +4,11 @@
 
 The goal of this project is to allow the user to access, store, share  and review healthy recipe. The user can search the recipe by typing the keyword in th search bar. 
 
+[View the website here](https://flask-recipe-manager-project.herokuapp.com/) 
+ 
+![screenshot](https://user-images.githubusercontent.com/76018052/132107485-261f0b1f-ddba-44e5-b3f9-a3f8e1d10f7f.PNG)
+
+
 ## Table of contents
 1. [UX](#ux)   
 a.[User Stories](#user-stories)  
