@@ -242,8 +242,8 @@ a {
 }
 
 @media screen and (max-width: 280px) {
-    .textarea-add>label {
-        top: -23px;
+    #preparation-label {
+        top: -30px;
     }
     .buttons .s4 {
         padding: 0 .40rem;
@@ -263,6 +263,12 @@ a {
 @media screen and (max-width: 568px) {
     textarea.mt-textarea {
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .edit-recipe-page #preparation {
+        margin-top: 30px;
     }
 }
 
