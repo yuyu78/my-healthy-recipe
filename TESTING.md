@@ -37,6 +37,10 @@ When the user logged out, check that the message "You have been logged out
 It will appear in the navbar: homepage, Login, register.  
 The welcome message "Welcome to my Heatlhy Recipe! To create your favorites healthy recipes, register here" with a link in "here" which will direct to the register page
 
+### Footer  
+1. When hover on the social media link, the background color changes  
+2. All the link direct to the correct social media page
+3. The footer is responsive in all devices
 
 ### Homepage  
 1. Check if the homepage is responsive in all devices.  
@@ -63,6 +67,14 @@ By clicking on one recipe, it will direct to the page show_recipe, with the name
 Check by clicking in the next page that the background color of the number of page related is changing.   
 ![pagination color](https://user-images.githubusercontent.com/76018052/132110269-6b70e73c-f6d8-42a7-9b76-3b5246859060.PNG)
 
+### Add recipe page  
+
+1. All the inputs and buttons are responsive in all devices.  
+2. If the category is not selected or the inputs are not filled in, a message will specify that the category or the inputs have to be selected or filled in.
+3. If the user adds the recipe by clicking the button "add", it will direct to the homepage with a message on the top "Recipe Successfully Added".  
+4. By clicking the reset button, the category and all the inputs will be empty.  
+5. By clicking the cancel button, it will direct to the homepage  
+6. In the ingredients and preparation inputs, advice the user to return to the line after each information so that it will display like a list  
 
 
 ## Bugs
