@@ -2,11 +2,11 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
 
 @media only screen and (min-width: 601px) {
     .container {
@@ -28,7 +28,7 @@ body {
     }
 }
 
-/* ------------------------------------------------------------------ footer */
+/* ------------------------------------------------------------------ Footer */
 
 /*Social media link */
 
@@ -57,14 +57,14 @@ body {
 /* ------------------------------------------------------------------ Home page*/
 
 .hero-image {
-    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-image.jpg");
+    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59), url("../images/background-image.jpg");
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-} 
+}
 
 .hero-image h1 {
     margin-top: 0;
@@ -74,6 +74,7 @@ body {
     .hero-image h1 {
         font-size: 3rem;
     }
+
     nav .brand-logo {
         font-size: 1.2rem;
     }
@@ -87,7 +88,7 @@ body {
     text-shadow: 2px 5px 6px #121312d4;
 }
 
-/* -------------------------------------Pagination */
+/* Pagination */
 
 .pagination {
     list-style: none;
@@ -96,34 +97,20 @@ body {
     display: flex;
     justify-content: center
 }
-        
+
 .pagination li {
     margin: 0 1px;
 }
 
 .pagination li a.active {
-    background-color:#d1ecea;
+    background-color: #d1ecea;
 }
 
-/* ------------------------------------- Search in homepage*/
+/* Recipes list in homepage*/
 
-.search-input {
-    margin: 10px;
+.recipe-list a {
+    color: black;
 }
-
-/* ------------------------------------- Buttons homepage*/
-
-@media screen and (max-width: 280px) {
-    .search-input .red {
-        margin-bottom: 10px;
-    }
-}
-
-/* ----------------------------------------recipes list in homepage*/
-
-a { 
-    color: black; 
-} 
 
 .card:hover {
     border-radius: 10px;
@@ -131,32 +118,34 @@ a {
 }
 
 .card .card-image img {
-    max-height:100%;
+    max-height: 100%;
     height: 350px;
     object-fit: cover;
 }
 
-/* ------------------------------------------------------------------ flash message Login/Register */
+.created-by {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #8080808c
+}
 
-/* flash message */
+/* Flash message Login/Register */
 
 .flashes h4 {
     line-height: 2;
 }
 
-/* margin-bottom end the page */
+/* ---------------------------------------------------------------Login/Register page */
 
 @media screen and (max-width: 568px) {
     .register-login {
         margin-bottom: 30px;
     }
-    form.col.s12.m8.offset-m2 {
-        padding: 15px;
-    }
 }
 
-
-/* ------------------------------------------------------------------ show_recipe page with ingredients and prepation */
+/* ------------------------------------------------------------------ show_recipe page with ingredients and preparation */
 
 .recipe-page {
     margin-top: 3rem;
@@ -176,63 +165,58 @@ a {
 }
 
 @media screen and (max-width: 568px) {
-    .recipe-image{
+    .recipe-image {
         height: 350px;
     }
 }
 
-/* button edit, delete and homepage */
+/* Input ingredients and preparation */
+.list-recipe {
+    white-space: pre-wrap;
+    font-size: 17px;
+}
+
+/* Button edit, delete and homepage */
 .recipe-page .modal-footer {
     text-align: center;
 }
 
-/* delete modal message */
-.recipe-page .modal-close {
-    border: 2px solid black;
-    box-shadow: 2px 2px #888888;
+@media screen and (max-width: 280px) {
+    .home-btn {
+        margin-top: 10px;
+    }
 }
 
-.recipe-page .modal-close:hover {
-    background-color: #80cbc4;
-}
-
-.recipe-page .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
-    margin: 6px 30px 10px;
-}
-
+/* Modal message */
 .recipe-page .modal {
     width: 35%;
 }
 
-/* ------------------------------------------------------------------ Add recipe page */
-
-.add-recipe-page, .edit-recipe-page {
-    max-width: 1000px;
-}
-
-@media screen and (min-width: 768px) {
-    .input-field {
-        width: 35%;
+@media screen and (max-width: 568px) {
+    .recipe-page .modal {
+        width: 70%;
     }
 }
 
-.created-by {
-    display: block;
-    line-height: 32px;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    color: #8080808c
+/* Button Modal message */
+.modal-footer .btn:hover,
+.modal-footer .btn-large:hover,
+.modal-footer .btn-small:hover {
+    border: 1px solid #444;
 }
 
-.list-recipe {
-    white-space: pre-wrap;
-    font-size: 17px;
-    font-weight: 450;
+/* ------------------------------------------------------------------ Add and edit recipe page */
+
+.add-recipe-page,
+.edit-recipe-page {
+    max-width: 1000px;
 }
+
+/* ------------------------------------------------------------------ Add recipe page */
 
 /*Ajust mobile size */
 @media screen and (max-width: 568px) {
-    .textarea-add > label {
+    .textarea-add>label {
         top: -10px;
     }
 }
@@ -241,19 +225,13 @@ a {
     #preparation-label {
         top: -30px;
     }
+
     .buttons .s4 {
         padding: 0 .40rem;
     }
 }
 
 /* ------------------------------------------------------------------ Edit recipe page */
-
-/* Button Modal message */
-.modal-footer .btn:hover,
-.modal-footer .btn-large:hover,
-.modal-footer .btn-small:hover {
-    border: 1px solid #444;
-}
 
 /* Textarea */
 @media screen and (max-width: 568px) {
@@ -268,13 +246,6 @@ a {
     }
 }
 
-/*Modal message */
-@media screen and (max-width: 568px) {
-    .recipe-page .modal {
-        width: 70%;
-    }
-}
-
 /* ------------------------------------------------------------------ Buttons on edit, add and show_recipe page */
 
 @media screen and (min-height: 1024px) {
@@ -283,20 +254,14 @@ a {
     }
 }
 
-@media screen and (max-width: 280px) {
-    .home-btn {
-        margin-top: 10px;
-    }
-}
-
 /* ------------------------------------------------------------------ Error page*/
 
 .error-background {
-    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59),url("../images/background-error.jpg");
+    background-image: linear-gradient(to top, rgb(255 255 255 / 86%), #84dede59), url("../images/background-error.jpg");
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0px;
-} 
+}

@@ -252,4 +252,9 @@ To avoid there errors:
     Except jinja code issue, no error.  
 
 * show_recipe.html  
-Error as the img element nust have an alt attribute, but because I am using jinja template to retrieve mongodb image in the img tag, not possible to add alt. 
+Error as the img element nust have an alt attribute, but because I am using jinja template to retrieve mongodb image in the img tag, not possible to add alt.   
+
+#### CSS
+
+No error.  
+
