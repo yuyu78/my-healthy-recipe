@@ -40,11 +40,11 @@ As a **first-time visitor**, I want:
 * To create an account to access more functionality so I can create, add, edit and delete recipes
 
 As a **returning visitor**, I want:
-* To pin my favorite recipe from my own recipe book or from other user
-* To create my own recipe by adding the title, the ingredients and the preparation
-* To be able to update, modify the recipe
-* To delete my own recipe 
-* To review the recipe of other users 
+* To pin my favorite recipe from my own recipe book or from other user so when I come back to the website, I will find easily my favorites recipes
+* To create my own recipe by adding the title, the image, the ingredients and the preparation so I can show my recipe through the website to others visitors
+* To be able to update, modify the recipe so I can improve the recipe
+* To delete my own recipe so the recipe won´t appear in the website anymore 
+* To review the recipe of other users so I can provide feedback 
 
 ### Strategy plane <a name="strategy-plane"></a>
 The **targeted audiences** are: 
