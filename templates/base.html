@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/47aa28a2ac.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    {% block styles %}
-    {% endblock %}
     <title>Recipes</title>
 </head>
-<body>
 
+<body>
     <header>
         <!-- Top navbar -->
         <nav class="teal lighten-3">
@@ -36,11 +36,11 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('add_recipe') }}">Add recipe</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('add_recipe') }}">Add recipe</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -48,13 +48,13 @@
     <section>
         <!-- Flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="teal lighten-3 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="teal lighten-3 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 
@@ -63,14 +63,14 @@
         {% endblock %}
     </main>
 
-    <!-- Footer -->    
+    <!-- Footer -->
     <footer class="page-footer teal lighten-3">
         <div class="container">
             <div class="row">
                 <!-- Name of the website and advertise sentence -->
                 <div class="col l6 s12 m6">
                     <h5>My Healthy Recipe</h5>
-                    <p class="grey-text text-lighten-4" ><i>Eat, enjoy healthy food and get inpired.</i></p>
+                    <p class="grey-text text-lighten-4"><i>Eat, enjoy healthy food and get inpired.</i></p>
                 </div>
                 <!-- Social media links -->
                 <div class="col l4 offset-l2 s12 m6">
@@ -78,24 +78,24 @@
                     <ul class="list-inline">
                         <!-- Facebook -->
                         <li><a target="_blank" href="https://www.facebook.com/" rel="noopener">
-                            <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                        </a></li>
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            </a></li>
                         <!-- Instagram -->
                         <li><a target="_blank" href="https://www.instagram.com/" rel="noopener">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a></li>
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a></li>
                         <!-- Twitter -->
                         <li><a target="_blank" href="https://twitter.com/" rel="noopener">
-                            <i class="fab fa-twitter-square" aria-hidden="true"></i>
-                        </a></li>
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                            </a></li>
                         <!-- Linkedin -->
                         <li><a target="_blank" href="https://ie.linkedin.com/" rel="noopener">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a></li>
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a></li>
                         <!-- Pinterest -->
                         <li><a target="_blank" href="https://www.pinterest.com/" rel="noopener">
-                            <i class="fab fa-pinterest-square" aria-hidden="true"></i>
-                        </a></li>
+                                <i class="fab fa-pinterest-square" aria-hidden="true"></i>
+                            </a></li>
                     </ul>
                 </div>
             </div>
@@ -114,4 +114,5 @@
     {% block scripts %}
     {% endblock %}
 </body>
+
 </html>

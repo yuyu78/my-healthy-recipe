@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="recipe_name" name="recipe_name" class="materialize-textarea" type="text"
-                        required></input>
+                        required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="image_url" name="image_url" class="materialize-textarea" type="url"
-                        required></input>
+                        required>
                     <label for="image_url">Enter an https:// URL for the image</label>
                 </div>
             </div>
@@ -56,11 +56,11 @@
                 </div>
                 <!-- Button Reset -->
                 <div class="col s4 m2 center-align">
-                    <a type="button" onclick="formReset()" value="Reset form" class="col s12 btn-large waves-effect waves-light">Reset</a>
+                    <button type="button" onclick="formReset()" class="col s12 btn-large waves-effect waves-light">Reset</button>
                 </div>
                 <!-- Button Cancel -->
                 <div class="col s4 m2 center-align">
-                    <a type="button" class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">Cancel</a>
+                    <a class="col s12 btn-large waves-effect waves-light cancel" href="{{ url_for('get_recipes') }}">Cancel</a>
                 </div>
             </div>
         </form>
