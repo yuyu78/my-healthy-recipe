@@ -28,12 +28,12 @@ Devices tested during the project:
 2. Check if all the link on the right side of the navbar will change the background color agter hovering 
 3. Check if on mobile size and Ipad, it will collapse to hamburger
 4. User in sesion and not in session  
-User in session:  
-In the navbar on the right, it will appear the homepage, add recipe and logout.  
-When the user logged out, check thatt the message "You have been logged out
-" will render  
-
-User not in session:  
+**User in session**:  
+In the navbar on the right, it will appear the homepage, add recipe and logout.    
+In the welcome message, it will appear the username and the message above will be "You can search your favorites recipes below or add a new recipe by clicking here" with the link on "here" which will direct to the add page.    
+When the user logged out, check that the message "You have been logged out
+" will show.   
+**User not in session**:  
 It will appear in the navbar: homepage, Login, register.  
 The welcome message "Welcome to my Heatlhy Recipe! To create your favorites healthy recipes, register here" with a link in "here" which will direct to the register page
 
@@ -65,6 +65,7 @@ Check by clicking in the next page that the background color of the number of pa
 
 
 
+## Bugs
 ---
 * When I use the url method on the link "home" of the navbar, it shows an error message in the console 
 ![error message violation console](https://user-images.githubusercontent.com/76018052/128433103-67578485-901a-42e0-9ba1-e190fae5b67a.PNG)  
