@@ -17,10 +17,38 @@ Devices tested during the project:
 * Ipad Pro
 * Surface Duo
 * Galaxy Fold
-
+---
 ## Testing User Stories
 ---
+As a **first-time visitor**, I want:  
+1. To have easy and clear information so I know quickly how to use the website  
+    * When the visitors land on the home page, under the welcome message, it explains that to create the recipes, the visitors have to register
+    * The search input and select category are straighforwards, with the button reset and search
+2. To view the recipe so I can check the ingredients and preparation to cook  
+    * When the visitors click on one recipe from the homepage, it will direct to a page with the ingredients and preparation
+    * The page of the recipe selected is clear, simple and not overwhelming, with the picture, name, ingredients and preparation
+3. To find a recipe by typing the keyword in the search bar so I can choose the recipe I want  
+    * The visitors can search by typing a keyword in search with or without category
+    * The visitors can type the name of the recipe or an ingredient: for example if the visitors type milk, it will appear all the recipes related to the milk
+4. To search some recipe by choosing the category so I can search easily based on the category  
+    * The visitors can select one or multiple category 
+    * the visitors can search recipes by selecting the category with or without typing anything in the search input
+5. To create an account to access more functionality so I can create, add, edit and delete recipes  
+    * The visitors can add, edit, delete a recipe by creating an account  
 
+As a **returning visitor**, I want:  
+1. To create my own recipe by adding the title, the ingredients and the preparation   
+    * After logged in to their account, th visitors have an option on the navbar or in the link under the welcome message to add a recipe 
+    * If the category is not selected, the fields are not filled in, or the URL doesn´t match, it will show a message that it requires
+2. To be able to update, modify the recipe
+    * After logged in to their account, the visitors has an option to edit their own recipe 
+    * The visitors have the option to cancel if they don´t want to edit 
+
+3. To delete my own recipe so the recipe won´t appear anymore in the website
+    * After logged in to their account, the visitors has an option to delete their own recipe 
+    * By clicking on the delete button, it will appear a modal message asking if the visitors are sure to delete the recipe, this feature is to avoid that the visitors delete the recipe by mistake. 
+
+---
 ## Manual Testing
 ---
 ### Navigation bar  
@@ -42,7 +70,7 @@ The welcome message "Welcome to my Heatlhy Recipe! To create your favorites heal
 2. All the link direct to the correct social media page
 3. The footer is responsive in all devices
 
-### Homepage  
+### Homepage (homepage.html)  
 1. Check if the homepage is responsive in all devices.  
 2. Search and select category    
 
@@ -67,15 +95,48 @@ By clicking on one recipe, it will direct to the page show_recipe, with the name
 Check by clicking in the next page that the background color of the number of page related is changing.   
 ![pagination color](https://user-images.githubusercontent.com/76018052/132110269-6b70e73c-f6d8-42a7-9b76-3b5246859060.PNG)
 
-### Add recipe page  
+### Show recipe page (show_recipe.html)
+1. When click on one recipe in the homepage, check if it directs to the page with all information about the recipe selected including the name, image, ingredients and preparation. 
+2. Check if the page is responsive in all devices  
+3. If the user is logged in, check if it appears the button "edit" and "delete" so that the user can edit or delete their own recipe.  
+4. If the user checks the recipe of another user, check it just appears the button homepage.  
+5. Check the button edit directs to the edit page  
+6. Check if the button delete will display a modal message asking if the user is sure to delete  the recipe:  
+-If the user click "yes", it will delete the recipe.   
+-If the user clicks  "no", it will stay in the edit page.  
+7. Check if the button homepage will direct to the homepage
 
+### Add recipe page (add_recipe.html) 
 1. All the inputs and buttons are responsive in all devices.  
 2. If the category is not selected or the inputs are not filled in, a message will specify that the category or the inputs have to be selected or filled in.
 3. If the user adds the recipe by clicking the button "add", it will direct to the homepage with a message on the top "Recipe Successfully Added".  
-4. By clicking the reset button, the category and all the inputs will be empty.  
+4. By clicking the reset button, the category and all the inputs will be reset.  
 5. By clicking the cancel button, it will direct to the homepage  
 6. In the ingredients and preparation inputs, advice the user to return to the line after each information so that it will display like a list  
+7. After adding the recipe, check that the recipe added appears in the list of all recipes in homepage, with the image, name and username.  
 
+### Edit recipe page (edit_recipe.html)  
+1. Check if the edit page is responsive in all devices.
+2. Check if one input is empty, by clicking on edit button, it will display the message "Please fill in this field" so that all the input has to be filled in.   
+3. Check if after clicking on edit button (if all inputs, category are filled), it will direct to the homepage with the message "Recipe Successfully Updated" on the top.  
+4. Check if the user clicks on cancel button, it will direct to the show recipe page with the same recipe selected.  
+5. Check if the homepage button direct to the homepage.   
+
+### Login page (login.html)    
+1. Check if the page is responsive in all devices.  
+2. Check if click on the button "Log in" with one or all input empty, it will display a message to require to fill in.  
+3. Check if fill in username and/or password with less than minlenght or more than maxlenght, it will display a message to match the format requested.  
+4. Check if username or password incorrect, it will display the message that the username or/and the password are incorrect.  
+5. If click on the button log in with the correct username and password, check if it will direct to the homepage with the welcome message following with the username.  
+6. Bellow the button, if the user doesn´t have an account yet, check if the link "Register here" will direct to the register page.  
+
+### Register page (register.html)    
+1. Check if the page is responsive in all devices.  
+2. Check if click on the button "Register" with one or all input empty, it will display a message to require to fill in.  
+3. Check if fill in username and/or password with less than minlenght or more than maxlenght, it will display a message to match the format requested.  
+4. Check if username or password incorrect, it will display the message that the username or/and the password are incorrect.  
+5. If click on the button register with the correct username and password, check if it will direct to the homepage with the welcome message following with the username.  
+6. Bellow the button, if the user has already an account, check if the link "Log in here" will direct to the login page.  
 
 ## Bugs
 ---
@@ -141,4 +202,54 @@ The solution is to add another condition as in the screenshot below (the code on
 * On mobile size on edit page, there was spaces above and below the URL input  
 ![edit url](https://user-images.githubusercontent.com/76018052/132046991-21460488-a995-4314-8688-d5622a2d3ddb.PNG)
 The issue comes from materialize, so to get rid of these spaces of the URL input, I added a style with smaller height in HTML in the URL input tag:  
- *<input id="image_url" name="image_url" type="url"value="{{ recipe.image_url }}" required style="height: 54px;"></input>*
+ *<input id="image_url" name="image_url" type="url"value="{{ recipe.image_url }}" required style="height: 54px;"></input>*  
+
+## Validators
+
+### HTML and CSS validators
+
+#### HTML  
+In all the html file, there are errors due to the Jinja code.
+
+* base.html:
+
+    There were 2 errors:   
+    ![html validator](https://user-images.githubusercontent.com/76018052/132140475-27dbd582-0329-4450-a861-ab25e0dce6dd.PNG)  
+    These errors are due because of this code inside the head tag:  
+    *{% block styles %}  
+    {% endblock %}*   
+    After removing this code, no error.  
+
+* 404.html and 500.html  
+    Except jinja code issue, no error.  
+
+* add_recipe.html  
+![error add](https://user-images.githubusercontent.com/76018052/132140813-2ce1586a-8151-4c45-8b7a-65786a649b61.PNG)
+To avoid there errors:  
+    - Remove the closing input
+    - Remove the value="Resete form" and the type="button" from the a tag    
+
+* edit_recipe.html 
+    - Remove one selected option       
+    ![error edit page select](https://user-images.githubusercontent.com/76018052/132141996-0bf6bc40-cbc7-4c60-aa65-694867517cad.PNG) 
+
+    - Remove the closing input  
+    ![edit page error input](https://user-images.githubusercontent.com/76018052/132142024-96051b5f-3132-4e55-adf5-e92ec1147da3.PNG)  
+    
+    - Remove the type attribute in textarea
+    ![edit error textarea no attribute](https://user-images.githubusercontent.com/76018052/132142059-fb6e0b9e-2f5c-4a17-b5a7-a14435e3d689.PNG)  
+    
+* homepage.html   
+    - Remove the type attribute in option.
+    ![homepage attribute not  alloed in option](https://user-images.githubusercontent.com/76018052/132142212-f9d999cb-5e6a-40b8-afc1-d86682d055db.PNG)
+    - Because I am using jinja template to retrieve mongodb image in the img tag, not possible to add alt.  
+    ![homepage error img alt](https://user-images.githubusercontent.com/76018052/132142268-1b0fd645-2252-4b0e-915e-b65915f5dfea.PNG)  
+
+* login.html     
+    Except jinja code issue, no error.  
+
+* register.html     
+    Except jinja code issue, no error.  
+
+* show_recipe.html  
+Error as the img element nust have an alt attribute, but because I am using jinja template to retrieve mongodb image in the img tag, not possible to add alt. 
