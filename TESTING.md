@@ -65,7 +65,7 @@ As a **returning visitor**, I want:
 
 ### Navigation bar 
 1. Check if the link "My healthy recipe" will change the color when hover and check if after clicking on this link. it will direct to the homepage  
-2. Check if all the link on the right side of the navbar will change the background color agter hovering 
+2. Check if all the link on the right side of the navbar will change the color after hovering 
 3. Check if on mobile size and Ipad, it will collapse to hamburger
 4. User in sesion and not in session  
 **User in session**:  
@@ -78,7 +78,7 @@ It will appear in the navbar: homepage, Login, register.
 The welcome message "Welcome to my Heatlhy Recipe! To create your favorites healthy recipes, register here" with a link in "here" which will direct to the register page
 
 ### Footer  
-1. When hover on the social media link, the background color changes  
+1. When hover on the social media link, the color changes  
 2. All the link direct to the correct social media page
 3. The footer is responsive in all devices
 

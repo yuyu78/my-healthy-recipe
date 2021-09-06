@@ -14,7 +14,29 @@ main {
     }
 }
 
+/* ------------------------------------------------------------------ Font color navbar and footer*/
+
+nav .brand-logo,
+nav ul a, 
+.page-footer,
+footer p,
+.footer-copyright .container {
+    color: black;
+}
+
+/* ------------------------------------------------------------------ Hover link navbar and footer*/
+
+.fab:hover,
+.brand-logo:hover {
+    color: #005747;
+    text-shadow: 0 0 10px white;
+}
+
 /* ------------------------------------------------------------------ Navbar*/
+
+nav ul a {
+    font-weight: 500;
+}
 
 @media screen and (max-width: 568px) {
     nav .brand-logo {
@@ -32,6 +54,10 @@ main {
 
 /*Social media link */
 
+.page-footer {
+    color: black;
+}
+
 .list-inline {
     padding-left: 0;
     margin-left: -5px;
@@ -45,13 +71,8 @@ main {
 }
 
 .fab {
-    color: white;
+    color: rgb(7, 7, 7);
     font-size: 25px;
-}
-
-.fab:hover,
-.brand-logo:hover {
-    color: #26a69a;
 }
 
 /* ------------------------------------------------------------------ Home page*/
@@ -86,6 +107,16 @@ main {
 
 .text-shadow {
     text-shadow: 2px 5px 6px #121312d4;
+}
+
+/* Search */
+
+.input-field>label {
+    color: black;
+}
+
+#search-button {
+    background-color: #016055;
 }
 
 /* Pagination */
@@ -128,7 +159,7 @@ main {
     line-height: 32px;
     margin-bottom: 8px;
     font-size: 1rem;
-    color: #8080808c
+    color: #0404048c;
 }
 
 /* Flash message Login/Register */
