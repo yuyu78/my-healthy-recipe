@@ -206,7 +206,8 @@ The issue comes from materialize, so to get rid of these spaces of the URL input
 
 ## Validators
 
-### HTML and CSS validators
+### HTML and CSS validators  
+Checked the validity of the code with [HTML Markup Validation Service](https://validator.w3.org/) and [CSS Validation Service](https://jigsaw.w3.org/css-validator/).  
 
 #### HTML  
 In all the html file, there are errors due to the Jinja code.
@@ -255,6 +256,17 @@ To avoid there errors:
 Error as the img element nust have an alt attribute, but because I am using jinja template to retrieve mongodb image in the img tag, not possible to add alt.   
 
 #### CSS
-
 No error.  
+
+### Javascript    
+Checked the validity of javascript with [JSHint](https://jshint.com/).  
+There are two undefined variables:  
+* The variable $ due to the jQuery  
+* The variable EvenTarget: to avoid the error message as explained in the bugs section  
+
+One unused variable forsReset: it used for the onclick function on reset button.  
+
+### Python
+Checked the validity of Python with [PEP8 online](http://pep8online.com/).   
+![pep online](https://user-images.githubusercontent.com/76018052/132146188-001f5e83-25c0-4bd4-93a2-3d409f25be66.PNG)
 

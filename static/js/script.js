@@ -26,7 +26,7 @@ $(document).ready(function(){
             }
             this.func(type, fn, capture);
         };
-    };
+    }
 }());
 
 function formReset() {

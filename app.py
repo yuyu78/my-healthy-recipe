@@ -1,4 +1,5 @@
-import os, math
+import os
+import math
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -21,7 +22,7 @@ mongo = PyMongo(app)
 # -------------------------------------- Homepage with all recipes
 @app.route("/")
 @app.route("/get_recipes/<int:page>")
-def get_recipes(page = 1):
+def get_recipes(page=1):
     # Pagination
     to_recipe_no = page * 6
     from_recipe_no = to_recipe_no - 6
@@ -32,17 +33,19 @@ def get_recipes(page = 1):
     categories = list(mongo.db.categories.find())
     # If user is logged in or registered
     if not session.get("user") is None:
-        return render_template("homepage.html", 
-                                username=session['user'], 
-                                recipes=show_recipes, 
-                                categories=categories, 
-                                number_of_pages=number_of_pages, 
-                                page=page)
-    return render_template("homepage.html", 
-                            recipes=show_recipes, 
-                            categories=categories, 
-                            number_of_pages=number_of_pages, 
-                            page=page)
+        return render_template(
+            "homepage.html",
+            username=session['user'],
+            recipes=show_recipes,
+            categories=categories,
+            number_of_pages=number_of_pages,
+            page=page)
+    return render_template(
+        "homepage.html",
+        recipes=show_recipes,
+        categories=categories,
+        number_of_pages=number_of_pages,
+        page=page)
 
 
 # -------------------------------------- Search in homepage
@@ -56,7 +59,7 @@ def search():
         # If search by typing search input and selecting category
         if recipe["category_name"] in categories:
             list_to_return.append(recipe)
-        # If search without selecting category 
+        # If search without selecting category
         elif len(categories) < 1:
             list_to_return.append(recipe)
     # If search without input search
@@ -64,12 +67,13 @@ def search():
         recipes = list(mongo.db.recipes.find())
         for recipe in recipes:
             if recipe["category_name"] in categories:
-                list_to_return.append(recipe)       
+                list_to_return.append(recipe)
     categories = list(mongo.db.categories.find())
-    return render_template("homepage.html", 
-                            recipes=list_to_return, 
-                            categories=categories, 
-                            search=True)
+    return render_template(
+        "homepage.html",
+        recipes=list_to_return,
+        categories=categories,
+        search=True)
 
 
 # -------------------------------------- Registration
@@ -79,7 +83,7 @@ def register():
         # check if username already exist in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
@@ -104,20 +108,22 @@ def login():
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-    
+
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for("get_recipes"))
+                existing_user["password"],
+                request.form.get("password")
+            ):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("get_recipes"))
             else:
-                #invalid password match
+                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-            
+
         else:
-            #username doesn´t exist
+            # username doesn´t exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -127,16 +133,16 @@ def login():
 # -------------------------------------- Logout
 @app.route("/logout")
 def logout():
-    #remove user from session cookies
+    # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("get_recipes"))
 
 
-# -------------------------------------- show_recipe.html(after clicking one recipe in the homepage)
+# -------------------------------------- show_recipe.html
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
-    #show the recipe page with image, name, ingredients and preparation
+    # show the recipe page with image, name, ingredients and preparation
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("show_recipe.html", recipe=recipe)
 
@@ -150,8 +156,8 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "image_url": request.form.get("image_url"),
             "ingredients": request.form.get("ingredients"),
-            "preparation": request.form.get("preparation"), 
-            "created_by": session["user"] 
+            "preparation": request.form.get("preparation"),
+            "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(my_recipe)
         flash("Recipe Successfully Added")
@@ -170,15 +176,18 @@ def edit_recipe(recipe_id):
             "recipe_name": request.form.get("recipe_name"),
             "image_url": request.form.get("image_url"),
             "ingredients": request.form.get("ingredients"),
-            "preparation": request.form.get("preparation"), 
-            "created_by": session["user"] 
+            "preparation": request.form.get("preparation"),
+            "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, my_recipe)
         flash("Recipe Successfully Updated")
         return redirect(url_for("get_recipes"))
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})  
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template(
+        "edit_recipe.html",
+        recipe=recipe,
+        categories=categories)
 
 
 # Delete function
@@ -199,7 +208,7 @@ def page_not_found(e):
 def internal_error(e):
     return render_template('500.html'), 500
 
-    
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
