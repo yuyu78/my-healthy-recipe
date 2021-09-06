@@ -5,15 +5,17 @@
 ## Table of contents
 1. [Devices tested](#device-tested)   
 
-2. [Testing User Stories](#testing-user-stories)  
+2. [Browsers tested](#browsers-tested)   
 
-3. [Manual Testing](#manual-testing)  
+3. [Testing User Stories](#testing-user-stories)  
 
-4. [Bugs](#bugs)  
+4. [Manual Testing](#manual-testing)  
 
-5. [Validators](#validators)
+5. [Bugs](#bugs)  
 
-6. [Lighthouse Testing](#lighthouse-testing)
+6. [Validators](#validators)
+
+7. [Lighthouse Testing](#lighthouse-testing)
 
 ## Devices tested <a name="device-tested"></a>
 
@@ -30,6 +32,12 @@ Devices tested during the project:
 * Ipad Pro
 * Surface Duo
 * Galaxy Fold
+
+## Browsers tested <a name="browsers-tested"></a>
+Browsers tested during the project:   
+* Chrome
+* Edge
+* Firefox   
 
 ## Testing User Stories <a name="testing-user-stories"></a>
 
@@ -282,4 +290,8 @@ One unused variable forsReset: it used for the onclick function on reset button.
 Checked the validity of Python with [PEP8 online](http://pep8online.com/).   
 ![pep online](https://user-images.githubusercontent.com/76018052/132146188-001f5e83-25c0-4bd4-93a2-3d409f25be66.PNG)
 
-## Lighthouse testing <a name="lighthouse-testing"></a>
+## Lighthouse testing <a name="lighthouse-testing"></a>  
+
+### Homepage desktop  
+![lighthouse homepage](https://user-images.githubusercontent.com/76018052/132250560-d2f5b729-77ea-4fab-805d-941ce6704792.PNG)
+  
