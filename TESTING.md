@@ -1,9 +1,22 @@
 # TESTING My healthy recipe
 
-[README file](https://github.com/yuyu78/my-healthy-recipe/blob/main/README.md)  
+[README file](https://github.com/yuyu78/my-healthy-recipe/blob/main/README.md)   
 
-## Devices tested
----
+## Table of contents
+1. [Devices tested](#device-tested)   
+
+2. [Testing User Stories](#testing-user-stories)  
+
+3. [Manual Testing](#manual-testing)  
+
+4. [Bugs](#bugs)  
+
+5. [Validators](#validators)
+
+6. [Lighthouse Testing](#lighthouse-testing)
+
+## Devices tested <a name="device-tested"></a>
+
 Devices tested during the project: 
 * Desktop
 * Moto G4 
@@ -17,9 +30,9 @@ Devices tested during the project:
 * Ipad Pro
 * Surface Duo
 * Galaxy Fold
----
-## Testing User Stories
----
+
+## Testing User Stories <a name="testing-user-stories"></a>
+
 As a **first-time visitor**, I want:  
 1. To have easy and clear information so I know quickly how to use the website  
     * When the visitors land on the home page, under the welcome message, it explains that to create the recipes, the visitors have to register
@@ -48,10 +61,9 @@ As a **returning visitor**, I want:
     * After logged in to their account, the visitors has an option to delete their own recipe 
     * By clicking on the delete button, it will appear a modal message asking if the visitors are sure to delete the recipe, this feature is to avoid that the visitors delete the recipe by mistake. 
 
----
-## Manual Testing
----
-### Navigation bar  
+## Manual Testing <a name="manual-testing"></a>
+
+### Navigation bar 
 1. Check if the link "My healthy recipe" will change the color when hover and check if after clicking on this link. it will direct to the homepage  
 2. Check if all the link on the right side of the navbar will change the background color agter hovering 
 3. Check if on mobile size and Ipad, it will collapse to hamburger
@@ -138,7 +150,7 @@ Check by clicking in the next page that the background color of the number of pa
 5. If click on the button register with the correct username and password, check if it will direct to the homepage with the welcome message following with the username.  
 6. Bellow the button, if the user has already an account, check if the link "Log in here" will direct to the login page.  
 
-## Bugs
+## Bugs <a name="bugs"></a>
 ---
 * When I use the url method on the link "home" of the navbar, it shows an error message in the console 
 ![error message violation console](https://user-images.githubusercontent.com/76018052/128433103-67578485-901a-42e0-9ba1-e190fae5b67a.PNG)  
@@ -204,7 +216,7 @@ The solution is to add another condition as in the screenshot below (the code on
 The issue comes from materialize, so to get rid of these spaces of the URL input, I added a style with smaller height in HTML in the URL input tag:  
  *<input id="image_url" name="image_url" type="url"value="{{ recipe.image_url }}" required style="height: 54px;"></input>*  
 
-## Validators
+## Validators <a name="validators"></a>
 
 ### HTML and CSS validators  
 Checked the validity of the code with [HTML Markup Validation Service](https://validator.w3.org/) and [CSS Validation Service](https://jigsaw.w3.org/css-validator/).  
@@ -270,3 +282,4 @@ One unused variable forsReset: it used for the onclick function on reset button.
 Checked the validity of Python with [PEP8 online](http://pep8online.com/).   
 ![pep online](https://user-images.githubusercontent.com/76018052/132146188-001f5e83-25c0-4bd4-93a2-3d409f25be66.PNG)
 
+## Lighthouse testing <a name="lighthouse-testing"></a>
