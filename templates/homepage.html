@@ -8,7 +8,7 @@
             <!-- Message without login -->
             {% if not session['user'] %}
             <h1>Welcome to my Heatlhy Recipe!</h1>
-            <p>To create your favorites healthy recipes, register  <a href="{{ url_for('register') }}" class="teal-text">here</a></p>
+            <p>To create your favorites healthy recipes, <b><a href="{{ url_for('register') }}" class="teal-text">register here</a></b></p>
             <!-- Message if user login -->
             {% else %}
             <h1>Welcome {{username}}!</h1>
