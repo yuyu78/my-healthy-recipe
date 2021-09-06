@@ -121,6 +121,10 @@ nav ul a {
     background-color: #016055;
 }
 
+#reset-btn-red {
+    background-color:#AA1409;
+}
+
 /* Pagination */
 
 .pagination {
