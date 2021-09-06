@@ -27,7 +27,7 @@ b.[Wireframe](#wireframe)
 6. [Deployment](#deployment)
 
 7. [Credits](#credits)
----
+
 ## UX <a name="ux"></a>
 
 ### User Stories <a name="user-stories"></a>
@@ -103,7 +103,7 @@ The schema for the database below:
 
 
 ## Technologies used <a name="technologies-used"></a>
----
+
 * [Git](https://git-scm.com/) for version control
 * [Github](https://github.com/) to store repositories.
 * [Gitpod](https://www.gitpod.io/), for the workspace. 
@@ -115,30 +115,29 @@ The schema for the database below:
 * [Flask](https://flask.palletsprojects.com/)
 * [Jquery](https://code.jquery.com/)
 * [Imgur](https://imgur.com/)
----
-## Testing <a name="testing"></a>
----
-The testing process can be found [here](https://github.com/yuyu78/my-healthy-recipe/blob/main/TESTING.md)
----
-## Deployment <a name="deployment"></a>
----
 
----
+## Testing <a name="testing"></a>
+
+The testing process can be found [here](https://github.com/yuyu78/my-healthy-recipe/blob/main/TESTING.md)
+
+## Deployment <a name="deployment"></a>
+
+
 ## Credits <a name="credits"></a>
----
+
 ### Inspiration
 Few part of the python code on the function register, login, logout, add, edit, delete, search are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
 
----
+
 ### Code
----
+
 * Navbar from [Materializecss](https://materializecss.com/navbar.html)
 * Footer from [Materializecss](https://materializecss.com/footer.html)
 * Cards recipes from [Materializecss](https://materializecss.com/cards.html#)
 * Modal message from [Materializecss](https://materializecss.com/modals.html)
 * Select input from [Materializecss](https://materializecss.com/select.html)
----
+
 ### Media
----
+
 All the image are from [Unplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
 
