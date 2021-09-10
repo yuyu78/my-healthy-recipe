@@ -121,7 +121,26 @@ The schema for the database below:
 The testing process can be found [here](https://github.com/yuyu78/my-healthy-recipe/blob/main/TESTING.md)
 
 ## Deployment <a name="deployment"></a>
+* Sign up or login  to Heroku
+* Click on "New" no the right and select "Create a new app"
+* Enter your app name and select the region the closest to you
+* Click on "Create app"
+* From the dashboard, click on "Deploy" tab
+* Go to "Deployment method" and select "Github"
+* Search your Github repository and click on "Connect"
+* Go to setting tab and click on "Reveal Config Vars"
+* Enter the keys/values which also match with your env.py file  
 
+| Key| Value | 
+| --- | --- | 
+| IP | 0.0.0.0 | 
+| PORT | 5000 |
+| SECRET_KEY | *Your secret key* |
+| MONGO_URI | *Your Mongo URI* |
+| MONGO_DBNAME | *Name of your database* |
+
+* Go to the 'Deploy' tab and click 'Enable Automatic Deployment'.
+* Choose the branch and click on "Deploy Branch"
 
 ## Credits <a name="credits"></a>
 
