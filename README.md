@@ -142,6 +142,13 @@ The testing process can be found [here](https://github.com/yuyu78/my-healthy-rec
 * Go to the 'Deploy' tab and click 'Enable Automatic Deployment'.
 * Choose the branch and click on "Deploy Branch"
 
+### Forking the GitHub Repository
+
+1. Go to the repository [my healthy recipe](https://github.com/yuyu78/my-healthy-recipe)
+2. In the top right corner of the page, click on the "Fork" button
+3. You will have the copy of the original repository in your Github account
+
+
 ## Credits <a name="credits"></a>
 
 ### Inspiration
