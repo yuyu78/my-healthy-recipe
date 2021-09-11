@@ -6,8 +6,7 @@ The goal of this project is to allow the user to access, store, share  and revie
 
 [View the website here](https://flask-recipe-manager-project.herokuapp.com/) 
  
-![screenshot](https://user-images.githubusercontent.com/76018052/132107485-261f0b1f-ddba-44e5-b3f9-a3f8e1d10f7f.PNG)
-
+![screenshot web healthy](https://user-images.githubusercontent.com/76018052/132963463-7b200ec1-c1b9-4855-96d5-257ff0b32ded.PNG)
 
 ## Table of contents
 1. [UX](#ux)   
@@ -73,7 +72,7 @@ The main color is light green and blue, which represents health, wellness, balan
 
 **Existing Features** 
 
-* Each page has a responsive fixed navigation bar with recipes(in the home page), login and register.
+* Each page has a responsive fixed navigation bar with recipes (in the home page), login and register.
 * Each page has a footer with the name of the website, copyright and social media link
 * Search a recipe by typing the keyword and/or choosing the category: starter, main, desert, snack, drink
 * The user can click on the button “reset” to reset the research
