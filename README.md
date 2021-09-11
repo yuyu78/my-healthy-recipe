@@ -146,16 +146,27 @@ The testing process can be found [here](https://github.com/yuyu78/my-healthy-rec
 
 1. Go to the repository [my healthy recipe](https://github.com/yuyu78/my-healthy-recipe)
 2. In the top right corner of the page, click on the "Fork" button
-3. You will have the copy of the original repository in your Github account
+3. You will have the copy of the original repository in your Github account  
 
+Forking allow to make change to the new repository without changing the original one.
+
+### Cloning the GitHub Repository
+1. Go to the repository [my healthy recipe](https://github.com/yuyu78/my-healthy-recipe)
+2. Click to the green button Code
+3. Choose HTTPS, SSH, or GitHub CLI, then copy the URL
+4. Open Git Bash
+5. Change the directory to the location where you want the cloned directory
+6. Type "git clone" and paste the URL you copied from the step 3.
+7. Press enter to create your local clone
 
 ## Credits <a name="credits"></a>
 
 ### Inspiration
 Few part of the python code on the function register, login, logout, add, edit, delete, search are inpisred from the course of Code Institute: **Backend development mini project putting all it together**
 
-
 ### Code
+
+#### Materialize
 
 * Navbar from [Materializecss](https://materializecss.com/navbar.html)
 * Footer from [Materializecss](https://materializecss.com/footer.html)
@@ -163,7 +174,19 @@ Few part of the python code on the function register, login, logout, add, edit, 
 * Modal message from [Materializecss](https://materializecss.com/modals.html)
 * Select input from [Materializecss](https://materializecss.com/select.html)
 
+#### Bugs
+* To avoid error message in te console, check in [stackoverflow](https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961)
+* To use list-inline like bootstrap and align the social media links on the footer, I checked the solution in [stackoverflow](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss)
+* To change the welcome message when the user is login, checked the solution to [stackoverflow](https://stackoverflow.com/questions/58089743/how-to-fix-login-and-logout-in-jinja-template-based-on-user-session)
+* To adjust card's size in all the same height, check in [Dogfalo's github](https://github.com/Dogfalo/materialize/issues/3814)
+* To align the pagination horizontally, checked in [developer mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Pagination)
+
 ### Media
 
 All the image are from [Unplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/)
 
+### Acknowledgment
+
+* My mentor Miguel who provided advice and feedback during the project
+* All the tutor of Code Institute
+* Code Institute Slack community
