@@ -19,13 +19,15 @@ b.[Wireframe](#wireframe)
 
 3. [Database](#database)  
 
-4. [Technologies used](#technologies-used)  
+4. [Wireframe](#wireframe)  
 
-5. [Testing](#testing)
+5. [Technologies used](#technologies-used)  
 
-6. [Deployment](#deployment)
+6. [Testing](#testing)
 
-7. [Credits](#credits)
+7. [Deployment](#deployment)
+
+8. [Credits](#credits)
 
 ## UX <a name="ux"></a>
 
@@ -87,11 +89,12 @@ The main color is light green and blue, which represents health, wellness, balan
 **Features left to implement**
 
 * Able to share recipe in social media
+* Add admin user to manage category
 * Delete the account
 * Update username 
 * Able to save the favorites recipes
-* Able to reset password if thomputer. This feature will be covered in the upcoming Fullstack with Django lesson so for the moment, I am using the input with the type=URL so that the image cane user forgot 
-* Allow the user to upload image from the c be stored with the URL address.  
+* Able to reset password of the user's account. 
+* Able to upload Image from the computer. This feature will be covered in the upcoming Fullstack with Django lesson so for the moment, I am using the input with the type=URL.  
 * Add pagination if the search result exceeds more than 6 recipes. For the moment, when the user searchs a recipe, it will show the result without pagination. 
  
 ## Database <a name="database"></a>
@@ -99,7 +102,19 @@ The main color is light green and blue, which represents health, wellness, balan
 The schema for the database below:   
 ![schema mongodb](https://user-images.githubusercontent.com/76018052/132092572-e1b18587-18ab-411d-a9c8-f2d9b4d108ec.PNG)
 
+## Wireframe <a name="wireframe"></a>
 
+[Home page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/homepage.pdf)
+
+[Show recipe page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/show_recipe.pdf)
+
+[Edit recipe page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/edit_page.pdf)
+
+[Add recipe page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/add_recipe.pdf)
+
+[Login page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/login.pdf)
+
+[Register page](https://github.com/yuyu78/my-healthy-recipe/blob/main/wireframe/register.pdf)
 
 ## Technologies used <a name="technologies-used"></a>
 
