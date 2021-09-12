@@ -118,17 +118,24 @@ The schema for the database below:
 
 ## Technologies used <a name="technologies-used"></a>
 
+### Languages
+* HTML5 
+* CSS3
+* Javscript
+* Python
+
+### Frameworks, Libraries & Programs Used
 * [Git](https://git-scm.com/) for version control
 * [Github](https://github.com/) to store repositories.
 * [Gitpod](https://www.gitpod.io/), for the workspace. 
 * [Balsamiq](https://balsamiq.com/wireframes/) to create a mockup.
 * [Dbdiagram](https://dbdiagram.io/home) to create the database schema.
-* [MongoDB](https://mongodb.com/)
-* [Heroku](https://heroku.com/)
-* [Materialize css 1.0.0](https://materializecss.com/)
-* [Flask](https://flask.palletsprojects.com/)
-* [Jquery](https://code.jquery.com/)
-* [Imgur](https://imgur.com/)
+* [MongoDB](https://mongodb.com/) to store database
+* [Heroku](https://heroku.com/) to deploy the site
+* [Materialize css 1.0.0](https://materializecss.com/) to make the website responsive
+* [Flask](https://flask.palletsprojects.com/) to create templates
+* [Jquery](https://code.jquery.com/) to initialize materialize script
+* [Imgur](https://imgur.com/) to host images
 
 ## Testing <a name="testing"></a>
 
@@ -189,7 +196,7 @@ Few part of the python code on the function register, login, logout, add, edit, 
 * Select input from [Materializecss](https://materializecss.com/select.html)
 
 #### Bugs
-* To avoid error message in te console, check in [stackoverflow](https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961)
+* To avoid error message in the console, check in [stackoverflow](https://stackoverflow.com/questions/46094912/added-non-passive-event-listener-to-a-scroll-blocking-touchstart-event/55388961#55388961)
 * To use list-inline like bootstrap and align the social media links on the footer, I checked the solution in [stackoverflow](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss)
 * To change the welcome message when the user is login, checked the solution to [stackoverflow](https://stackoverflow.com/questions/58089743/how-to-fix-login-and-logout-in-jinja-template-based-on-user-session)
 * To adjust card's size in all the same height, check in [Dogfalo's github](https://github.com/Dogfalo/materialize/issues/3814)
